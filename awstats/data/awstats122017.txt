@@ -1,0 +1,968 @@
+AWSTATS DATA FILE 7.4 (build 20150714)
+# If you remove this file, all statistics for date 201712 will be lost/reset.
+# Last config file used to build this data file was ./awstats.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 28
+POS_GENERAL 1971                
+POS_TIME 2653                
+POS_VISITOR 23089               
+POS_DAY 32152               
+POS_DOMAIN 3558                
+POS_LOGIN 4218                
+POS_ROBOT 4373                
+POS_WORMS 5215                
+POS_EMAILSENDER 5346                
+POS_EMAILRECEIVER 5489                
+POS_SESSION 32592               
+POS_SIDER 32805               
+POS_FILETYPES 5624                
+POS_DOWNLOADS 5774                
+POS_OS 5822                
+POS_BROWSER 6143                
+POS_SCREENSIZE 8321                
+POS_UNKNOWNREFERER 8395                
+POS_UNKNOWNREFERERBROWSER 8655                
+POS_ORIGIN 8835                
+POS_SEREFERRALS 8981                
+POS_PAGEREFS 9138                
+POS_SEARCHWORDS 9830                
+POS_KEYWORDS 9982                
+POS_MISC 2317                
+POS_ERRORS 10041               
+POS_CLUSTER 4074                
+POS_SIDER_404 10170               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20171214061707 635 193556 9818404452583
+FirstTime 20171201000124
+LastTime 20171214022955
+LastUpdate 20171214063118 635 0 635 0 0
+TotalVisits 393                 
+TotalUnique 225                 
+MonthHostsKnown 0                   
+MonthHostsUnknown 225                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+JavaEnabled 0 0 0
+PDFSupport 0 0 0
+QuickTimeSupport 0 0 0
+FlashSupport 0 0 0
+JavascriptDisabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 7 0
+TotalMisc 0 0 0
+RealPlayerSupport 0 0 0
+DirectorSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 104 104 3432167 28 93 1030494
+1 27 27 1083634 56 144 2137281
+2 45 45 1647368 37 128 1291311
+3 52 52 1871542 45 119 1349889
+4 75 75 2761531 41 106 1311136
+5 7 7 166406 39 97 1383140
+6 8 8 283499 36 92 1284744
+7 12 12 510055 98 161 3324812
+8 32 32 1388716 46 96 1262409
+9 69 69 2185096 41 109 1080192
+10 51 51 1485599 30 92 1031750
+11 178 178 6028983 169 293 1389121
+12 61 61 2256495 72 169 1851708
+13 144 144 5228192 54 164 1717527
+14 131 131 4875449 43 133 1270539
+15 367 367 12523928 57 257 1309544
+16 350 350 13994793 80 242 1146350
+17 234 234 8506922 96 290 2780202
+18 309 309 13384579 117 371 2260548
+19 119 119 5227622 72 185 1709758
+20 153 153 6851586 72 169 1438304
+21 282 282 8847525 83 199 1322354
+22 334 334 11920659 86 195 1248071
+23 194 194 7315756 83 216 2667770
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 30
+ua 2040 2040 76741264
+ru 966 966 31933995
+us 101 101 4677284
+de 57 57 2659664
+gb 31 31 1540505
+zz 16 16 610226
+ip 16 16 287092
+ca 13 13 644842
+nl 12 12 596230
+fr 11 11 536629
+eu 1 1 49579
+rs 2 2 90346
+ch 3 3 150231
+bg 1 1 49368
+uz 1 1 49568
+no 5 5 220985
+hu 7 7 348123
+ie 6 6 213726
+pl 2 2 99158
+at 2 2 99158
+lr 4 4 143762
+za 1 1 49579
+cz 1 1 50075
+sk 3 3 148737
+cn 3 3 150227
+ro 8 8 396420
+se 11 11 547859
+br 1 1 49579
+it 9 9 445575
+md 4 4 198316
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 19
+googlebot 480 19019644 20171214061707 0
+yandex 153 5254296 20171214002557 0
+slurp 67 2185512 20171213163751 0
+crawl 56 1923254 20171212062210 0
+bot[\s_+:,\.\;\/\\-] 50 1695632 20171209014731 0
+favicon 19 941600 20171213213850 0
+baiduspider 14 592584 20171207054607 0
+ahrefsbot 11 426486 20171213201153 0
+360spider 6 297025 20171214035002 0
+no_user_agent 4 198104 20171209004417 0
+bingbot 1 49568 20171211053438 0
+googlebot\-image 1 49579 20171201112430 0
+wget 1 49579 20171204083100 0
+[\s_+:,\.\;\/\\-]bot 2 90680 20171211052443 0
+surveybot 1 49342 20171213171402 0
+mail\.ru 1 31 20171204181810 0
+netcraft 4 186502 20171210060255 0
+w3c_validator 3 148271 20171207163651 0
+semrushbot 3 148737 20171205082554 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 4
+Unknown 843 29193777 0 0
+html 1244 53199277 0 0
+xml 2 10826 0 0
+php 1249 41374222 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 19
+macosx5 1 1
+winlong 6 6
+win7 2025 2025
+win2000 3 3
+macosx 175 175
+win8 7 7
+win8.1 46 46
+win10 388 388
+winxp 225 225
+Unknown 31 31
+win2003 3 3
+macosx11 1 1
+linux 14 14
+ios_ipad 2 2
+macosx10 3 3
+ios_iphone 174 174
+macosx4 2 2
+winnt 1 1
+linuxandroid 231 231
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 100
+safari4.6.1 3 3
+firefox47.0 6 6
+chrome51.0.2704.106 2 2
+opera44.5.1222.6594 1 1
+opera42.0.4331.9069 1 1
+netscape5.0 20 20
+chrome48.0.2550.2 28 28
+opera38.0.2220.41 1 1
+Unknown 30 30
+firefox54.0 7 7
+firefox52.52.15 1 1
+firefox52.0 11 11
+chrome63.0.3239.83 13 13
+chrome58.0.3029.110 12 12
+chrome54.8.3743.9015 1 1
+chrome58.0.3029.96 1 1
+chrome53.8.3208.8570 1 1
+msie10.0 6 6
+firefox45.0 1 1
+chrome57.5.0112.5484 1 1
+chrome11.0.669.0 1 1
+opera42.0.5537.9265 1 1
+safari11.0.1 115 115
+firefox57.0 46 46
+chrome56.2.7205.2033 1 1
+msie9.0 1 1
+firefox50.0 1 1
+chrome57.4.9899.4161 1 1
+chrome57.4.9155.4883 1 1
+chrome61.0.3163.100 101 101
+firefox3.6.8 6 6
+firefox31.0 8 8
+chrome41.0.2272.118 11 11
+chrome57.5.9208.4036 1 1
+safari10.0 51 51
+firefox45.66.13 1 1
+msie11.0 2 2
+chrome60.0.3112.90 2 2
+opera10.00 1 1
+chrome56.2.7787.1415 1 1
+chrome57.5.0158.5420 1 1
+opera41.9.3048.8775 1 1
+firefox45.66.19 1 1
+chrome57.0.2987.133 1 1
+chrome56.2.6283.1911 1 1
+firefox56.0 2 2
+msie8.0 2 2
+safari9.0 76 76
+opera44.5.0456.6728 1 1
+safari 10 10
+chrome62.0.3202.94 1984 1984
+chrome36.0.1985.125 1 1
+safari5.3.8 2 2
+chrome53.6.1489.6751 1 1
+firefox52.65.18 1 1
+chrome51.0.2704.79 1 1
+chrome57.0.2987.98 1 1
+chrome44.0.2403.89 2 2
+msie7.0 1 1
+opera36.0.2130.80 5 5
+chrome57.4.9830.4568 1 1
+chrome53.6.1633.5361 1 1
+opera44.5.0665.5937 1 1
+chrome59.0.3071.125 10 10
+chrome51.0.2704.103 1 1
+chrome62.0.3202.84 158 158
+chrome54.8.4714.9086 1 1
+opera35.0.2070.100283 1 1
+firefox52.42.99 1 1
+mozilla 1 1
+chrome61.0.3116.0 32 32
+firefox52.47.94 1 1
+chrome25.0.1349.2 1 1
+firefox7.0.1 200 200
+firefox45.72.25 1 1
+chrome63.0.3239.84 242 242
+firefox45.64.17 1 1
+opera40.0.2308.81 1 1
+opera44.4.0851.5123 1 1
+safari11.0 2 2
+opera44.6.1438.6700 1 1
+chrome53.0.2785.143 1 1
+chrome53.8.3179.8441 1 1
+opera10.01 1 1
+chrome58.0.3029.83 1 1
+opera49.0.2725.47 18 18
+safari5.6.1 1 1
+iphone 37 37
+firefox45.54.01 1 1
+chrome49.0.2623.112 6 6
+chrome50.0.2661.102 4 4
+chrome53.7.2247.8519 1 1
+chrome40.0.2214.85 4 4
+chrome57.5.0014.5742 1 1
+firefox29.0 2 2
+opera44.5.0962.5134 1 1
+chrome60.0.3112.113 1 1
+chrome57.5.0512.5240 1 1
+chrome53.8.3529.8891 1 1
+safari5.2.7 1 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 3
+Validator.nu/LV_http://validator.w3.org/services 20171210194143
+Go-http-client/1.1 20171212201214
+Mozilla/5.0_(compatible;_vkShare;__http://vk.com/dev/Share) 20171209230640
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+Go-http-client/1.1 20171212201214
+Validator.nu/LV_http://validator.w3.org/services 20171210194143
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 974 974
+From1 1 1
+From2 28 28
+From3 113 113
+From4 2222 2222
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 1
+yandex 28 28
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 18
+http://adaptivator.ru 56 56
+https://ocstore 13 13
+http://symby.ru/adaptest/ 7 7
+http://l.instagram.com 7 7
+http://ocstore 6 6
+https://ocstore/index.php 4 4
+https://ocstore 4 4
+http://ocstore 3 3
+https://away.vk.com/away.php 3 3
+http://ocstore/katalog/sostav-1 2 2
+https://h.yandex-team.ru 1 1
+https://ocstore/contact-us 1 1
+http://ocstore/sostav-1 1 1
+https://opencartforum.com/go/ 1 1
+https://faceicon.ru/analytics/ 1 1
+https://e.mail.ru/message/15130721790000000713/ 1 1
+https://ocstore/katalog/sostav-1 1 1
+https://ocstore/delivery-pay 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 4
+404 2655 5245331
+301 154 35053
+302 325 0
+500 16 8448
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 240
+/tovar/406.html 1 http://www.omega3.su/tovar/406.html
+/image/sert/med_2.png 2 https://omega3.su/index.php
+/tovar/021.html 1 http://www.omega3.su/tovar/021.html
+/admin/image/pay/logo-mir.png 1 https://omega3.su/admin/index.php
+/tovar/1007.html 1 http://www.omega3.su/tovar/1007.html
+/apple-touch-icon-120x120-precomposed.png 1 -
+/image/cache/catalog/demo/banners/rost_bg-228x228.jpg 1 -
+/admin/image/pay/logo-maestro.png 1 https://omega3.su/admin/index.php
+/ezhednevnoe_enyu.html 2 -
+/tovar/062.html 1 -
+//wordpress/wp-includes/wlwmanifest.xml 1 -
+/catalog/view/javascript/jquery/datetimepicker/locale/en-gb.js 1 https://omega3.su/
+/tovar/627.html 1 -
+/tovar/622.html 1 http://www.omega3.su/tovar/622.html
+/image/sert/table.png 2 https://omega3.su/index.php
+/tovar/800.html 1 http://www.omega3.su/tovar/800.html
+/tovar/601.html 2 http://www.omega3.su/tovar/601.html
+/tovar/630.html 2 http://www.omega3.su/tovar/630.html
+/tovar/036.html 1 http://www.omega3.su/tovar/036.html
+/tovar/700.html 1 http://www.omega3.su/tovar/700.html
+/tovar/503.html 1 http://www.omega3.su/tovar/503.html
+/tovar/502.html 2 -
+/tovar/402.html 2 -
+/images/tovar/037_S1.jpg 4 http://rabbitclouddownload115.fo.ru/blog
+/tovar/615.html 1 http://www.omega3.su/tovar/615.html
+/admin/image/pay/dov-icon4.png 1 https://omega3.su/admin/index.php
+/admin/image/seo-img.jpg 1 https://omega3.su/admin/index.php
+/tovar/408.html 1 http://www.omega3.su/tovar/408.html
+/catalog/view/theme/organic/js/script.js 6 https://omega3.su/
+/admin/image/pay/delivery-icon3.png 1 https://omega3.su/admin/index.php
+/tovar/417.html 2 http://www.omega3.su/tovar/417.html
+/tovar/802.html 1 http://www.omega3.su/tovar/802.html
+/image/pay/delivery-icon6.png 4 https://omega3.su/delivery-pay
+/admin/image/pay/logo-ym.png 1 https://omega3.su/admin/index.php
+//wp/wp-includes/wlwmanifest.xml 1 -
+/tovar/610.html 1 http://www.omega3.su/tovar/610.html
+/catalog/view/theme/organic/images/bx_loader.gif 1168 https://omega3.su/
+/mailru-domainCVCvRsZ8p6fIK8O0.html 1 http://omega3.su/mailru-domainCVCvRsZ8p6fIK8O0.html
+/tovar/501.html 1 http://www.omega3.su/tovar/501.html
+/admin/image/pay/delivery-icon4.png 1 https://omega3.su/admin/index.php
+/gzqiaqqzsffpql.html 1 -
+/tovar/0000010.html 1 http://www.omega3.su/tovar/0000010.html
+/image/pay/pay1.jpg 4 https://omega3.su/delivery-pay
+/tovar/029.html 1 http://www.omega3.su/tovar/029.html
+/tovar/628.html 1 http://www.omega3.su/tovar/628.html
+/tovar/623.html 2 -
+/tovar/017.html 3 -
+/tovar/409.html 1 http://www.omega3.su/tovar/409.html
+/tovar/636.html 1 http://www.omega3.su/tovar/636.html
+/tovar/018.html 1 http://www.omega3.su/tovar/018.html
+/tovar/055.html 1 http://www.omega3.su/tovar/055.html
+/tovar/41.html 1 http://www.omega3.su/tovar/41.html
+/tovar/068.html 1 http://www.omega3.su/tovar/068.html
+/tovar/611.html 1 -
+/tovar/424.html 1 http://www.omega3.su/tovar/424.html
+/image/sert/med_1.png 2 https://omega3.su/index.php
+/404.html 1 -
+/catalog/view/theme/organic/fonts/fontawesome-webfont.eot 1 https://omega3.su/katalog/sostav-3
+/image/pay/dov-icon6.png 4 https://omega3.su/delivery-pay
+/tovar/500.html 1 http://www.omega3.su/tovar/500.html
+/image/sert/med_5.png 2 https://omega3.su/index.php
+/images/tovar/048_S1.jpg 1 -
+/tovar/704.html 2 -
+/tovar/420.html 1 http://www.omega3.su/tovar/420.html
+/tovar/023.html 1 http://www.omega3.su/tovar/023.html
+/apple-touch-icon.png 2 -
+/admin/image/pay/delivery-icon6.png 1 https://omega3.su/admin/index.php
+/tovar/523.html 1 -
+//blog/wp-includes/wlwmanifest.xml 1 -
+/tovar/637.html 1 http://www.omega3.su/tovar/637.html
+/tovar/044.html 1 http://www.omega3.su/tovar/044.html
+/tovar/705.html 1 http://www.omega3.su/tovar/705.html
+/adres_magazina.html 1 http://www.omega3.su/adres_magazina.html
+/tovar/052.html 2 -
+/image/pay/delivery-icon3.png 4 https://omega3.su/delivery-pay
+/tovar/624.html 1 http://www.omega3.su/tovar/624.html
+/tovar/043.html 1 http://www.omega3.su/tovar/043.html
+/tovar/703.html 3 -
+/tovar/701.html 1 http://www.omega3.su/tovar/701.html
+/tovar/421.html 1 http://www.omega3.su/tovar/421.html
+/tovar/404.html 1 http://www.omega3.su/tovar/404.html
+/images/icon_no-foto.png 1 -
+/tovar/604.html 2 http://www.omega3.su/tovar/604.html
+/tovar/067.html 2 -
+/callback.html 1 http://www.omega3.su/callback.html
+/tovar/030.html 1 http://www.omega3.su/tovar/030.html
+/image/catalog/p1.jpg 38 -
+/image/pay/logo-maestro.png 4 https://omega3.su/delivery-pay
+/uslugi.html 1 http://www.omega3.su/uslugi.html
+/tovar/708.html 1 http://www.omega3.su/tovar/708.html
+/image/catalog/p2.jpg 37 -
+/catalog/view/theme/organic/fonts/fontawesome-webfont.woff 2 https://omega3.su/catalog/view/theme/organic/stylesheet/main.min.css
+/tovar/048.html 1 http://www.omega3.su/tovar/048.html
+/tovar/028.html 1 http://www.omega3.su/tovar/028.html
+/vse-ob-omega/ 2 -
+/image/sert/mint.png 2 https://omega3.su/index.php
+/tovar/605.html 1 http://www.omega3.su/tovar/605.html
+/tovar/418.html 1 http://www.omega3.su/tovar/418.html
+/tovar/631.html 1 http://www.omega3.su/tovar/631.html
+/images/tovar/017_M1.jpg 1 -
+/image/catalog/demo/banners/xsostav_img1.jpg 1 -
+/tovar/031.html 1 http://www.omega3.su/tovar/031.html
+/tovar/633.html 1 http://www.omega3.su/tovar/633.html
+/image/pay/delivery-icon5.png 4 https://omega3.su/delivery-pay
+/tovar/024.html 1 http://www.omega3.su/tovar/024.html
+/tovar/1001.html 1 http://www.omega3.su/tovar/1001.html
+/tovar/412.html 1 http://www.omega3.su/tovar/412.html
+/images/tovar/610_M1.jpg 7 -
+/tovar/607.html 2 http://www.omega3.su/tovar/607.html
+/tovar/616.html 1 http://www.omega3.su/tovar/616.html
+/image/pay/delivery-icon4.png 4 https://omega3.su/delivery-pay
+//xmlrpc.php 1 -
+/tovar/612.html 1 http://www.omega3.su/tovar/612.html
+/tovar/051.html 1 http://www.omega3.su/tovar/051.html
+/news/napolnenie_saita_informaciei.html 3 http://www.omega3.su/news/napolnenie_saita_informaciei.html
+/image/cache/catalog/demo/banners/nutt-bg-228x228.jpg 1 -
+/image/catalog/om3.jpg 5 https://omega3.su/
+/tovar/632.html 1 http://www.omega3.su/tovar/632.html
+/image/sert/med_4.png 2 https://omega3.su/index.php
+/vigodnoe_vlozhenie_sredstv.html 2 http://www.omega3.su/vigodnoe_vlozhenie_sredstv.html
+/tovar/060.html 2 -
+/tovar/401.html 1 http://www.omega3.su/tovar/401.html
+/tovar/039.html 1 http://www.omega3.su/tovar/039.html
+/userfiles/sustavy.jpg 1 -
+/tovar/608.html 2 http://www.omega3.su/tovar/608.html
+/tovar/414.html 1 http://www.omega3.su/tovar/414.html
+/images/tovar/402_S1.jpg 1 -
+/tovar/626.html 1 http://www.omega3.su/tovar/626.html
+/admin/image/pay/dov-icon5.png 1 https://omega3.su/admin/index.php
+/admin/image/seo-img1.jpg 1 https://omega3.su/admin/index.php
+/admin/image/pay/delivery-icon2.png 1 https://omega3.su/admin/index.php
+/tovar/040.html 1 http://www.omega3.su/tovar/040.html
+/tovar/1006.html 1 http://www.omega3.su/tovar/1006.html
+/tovar/620.html 1 http://www.omega3.su/tovar/620.html
+/tovar/054.html 1 http://www.omega3.su/tovar/054.html
+/tovar/1004.html 1 http://www.omega3.su/tovar/1004.html
+/KAfGD8DFcbtmLEnSUl2cxpgAZALk 1 -
+/tovar/058.html 3 http://www.omega3.su/tovar/058.html
+/tovar/049.html 1 http://www.omega3.su/tovar/049.html
+/tovar/015.html 1 http://www.omega3.su/tovar/015.html
+/image/pay/logo-ym.png 4 https://omega3.su/delivery-pay
+/tovar/000011.html 1 http://www.omega3.su/tovar/000011.html
+/kontakti.html 1 http://www.omega3.su/kontakti.html
+/image/pay/dov-icon3.png 4 https://omega3.su/delivery-pay
+/admin/image/pay/pay1.jpg 1 https://omega3.su/admin/index.php
+/delivery-pay.html 1 -
+/.well-known/apple-app-site-association 4 -
+/tovar/400.html 1 http://www.omega3.su/tovar/400.html
+/admin/image/seo-img2.jpg 1 https://omega3.su/admin/index.php
+/tovar/020.html 1 http://www.omega3.su/tovar/020.html
+//cms/wp-includes/wlwmanifest.xml 1 -
+/image/pay/dov-icon7.png 4 https://omega3.su/delivery-pay
+/tovar/061.html 1 http://www.omega3.su/tovar/061.html
+/tovar/045.html 1 http://www.omega3.su/tovar/045.html
+/tovar/041.html 1 http://www.omega3.su/tovar/041.html
+/apple-app-site-association 4 -
+/tovar/423.html 1 http://www.omega3.su/tovar/423.html
+/image/pay/logo-mir.png 4 https://omega3.su/delivery-pay
+/catalog/view/theme/organic/fonts/fontawesome-webfont.ttf 2 https://omega3.su/catalog/view/theme/organic/stylesheet/main.min.css
+/tovar/617.html 1 http://www.omega3.su/tovar/617.html
+/tovar/014.html 1 http://www.omega3.su/tovar/014.html
+/tovar/019.html 2 -
+/tovar/618.html 1 http://www.omega3.su/tovar/618.html
+/images/tovar/605_M1.jpg 1 http://www.omega3.su/images/tovar/605_M1.jpg
+/images/tovar/049_M1.jpg 1 http://ap77.ru/userfiles/na-diete-sela-tort.xml
+/images/tovar/616_M1.jpg 1 -
+/tovar/057.html 1 http://www.omega3.su/tovar/057.html
+/tovar/403.html 1 -
+/tovar/609.html 1 http://www.omega3.su/tovar/609.html
+/userfiles/%D0%BC%D0%BE%D1%87%D0%B5%D0%B2%D1%8B%D0%B4%D0%B8%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0.JPG 6 -
+/image/pay/dov-icon5.png 4 https://omega3.su/delivery-pay
+/tovar/600.html 1 -
+/image/sert/med_6.png 2 https://omega3.su/index.php
+/yandex.xml 4 -
+/tovar/1002.html 1 http://www.omega3.su/tovar/1002.html
+/admin/image/pay/dov-icon3.png 1 https://omega3.su/admin/index.php
+/image/pay/delivery-icon2.png 4 https://omega3.su/delivery-pay
+/tovar/038.html 1 http://www.omega3.su/tovar/038.html
+/kak_vibirat_produkti_dlya_sohraneniya_zdorovya_i_ozdorovleniya_organizma.html 1 http://www.omega3.su/kak_vibirat_produkti_dlya_sohraneniya_zdorovya_i_ozdorovleniya_organizma.html
+/images/tovar/621_S1.jpg 1 -
+/image/pay/dov-icon2.png 4 https://omega3.su/delivery-pay
+/admin/image/pay/delivery-icon1.png 1 https://omega3.su/admin/index.php
+/tovar/405.html 1 http://www.omega3.su/tovar/405.html
+/tovar/050.html 3 http://www.omega3.su/tovar/050.html
+/admin/image/pay/logo-visa.png 1 https://omega3.su/admin/index.php
+/tovar/027.html 1 -
+/.well-known/assetlinks.json 3 -
+/image/sert/med_3.png 2 https://omega3.su/index.php
+/tovar/614.html 1 http://www.omega3.su/tovar/614.html
+/tovar/1003.html 1 -
+/delivery-payhtml 2 -
+/tovar/425.html 1 http://www.omega3.su/tovar/425.html
+/admin/image/pay/delivery-icon5.png 1 https://omega3.su/admin/index.php
+/tovar/410.html 2 http://www.omega3.su/tovar/410.html
+/tovar/016.html 1 http://www.omega3.su/tovar/016.html
+/tovar/1008.html 1 http://www.omega3.su/tovar/1008.html
+/tovar/525.html 1 http://www.omega3.su/tovar/525.html
+/catalog/view/theme/organic/fonts/fontawesome-webfont.woff2 2 https://omega3.su/catalog/view/theme/organic/stylesheet/main.min.css
+/catalog/view/theme/organic/images/controls.png 1003 https://omega3.su/
+/tovar/042.html 1 http://www.omega3.su/tovar/042.html
+/image/pay/dov-icon4.png 4 https://omega3.su/delivery-pay
+/tovar/035.html 2 http://www.omega3.su/tovar/035.html
+/tovar/033.html 1 http://www.omega3.su/tovar/033.html
+/tovar/416.html 1 http://www.omega3.su/tovar/416.html
+/tovar/066.html 1 http://www.omega3.su/tovar/066.html
+/tovar/056.html 1 http://www.omega3.su/tovar/056.html
+/tovar/621.html 1 http://www.omega3.su/tovar/621.html
+/dostavka_i_oplata.html 1 http://www.omega3.su/dostavka_i_oplata.html
+//wp-includes/wlwmanifest.xml 1 -
+/tovar/629.html 1 http://www.omega3.su/tovar/629.html
+/image/pay/logo-visa.png 4 https://omega3.su/delivery-pay
+/tovar/411.html 1 http://www.omega3.su/tovar/411.html
+/tovar/053.html 1 http://www.omega3.su/tovar/053.html
+/tovar/025.html 1 http://www.omega3.su/tovar/025.html
+/tovar/1005.html 1 -
+/tovar/706.html 1 http://www.omega3.su/tovar/706.html
+/admin/image/pay/logo-kassa.png 1 https://omega3.su/admin/index.php
+/image/pay/dov-icon1.png 4 https://omega3.su/delivery-pay
+/image/catalog/p3.jpg 37 -
+/image/pay/delivery-icon1.png 4 https://omega3.su/delivery-pay
+/tovar/026.html 1 http://www.omega3.su/tovar/026.html
+/ 2 -
+/tovar/419.html 1 http://www.omega3.su/tovar/419.html
+//site/wp-includes/wlwmanifest.xml 1 -
+/tovar/415.html 2 http://www.omega3.su/tovar/415.html
+/tovar/638.html 1 -
+/image/cache/catalog/demo/banners/gor_bg-228x228.jpg 2 -
+/admin/image/pay/dov-icon1.png 1 https://omega3.su/admin/index.php
+/admin/image/pay/dov-icon6.png 1 https://omega3.su/admin/index.php
+/image/pay/logo-kassa.png 4 https://omega3.su/delivery-pay
+/tovar/521.html 1 http://www.omega3.su/tovar/521.html
+/tovar/634.html 2 http://www.omega3.su/tovar/634.html
+/admin/image/pay/dov-icon2.png 1 https://omega3.su/admin/index.php
+/admin/image/pay/dov-icon7.png 1 https://omega3.su/admin/index.php
+/tovar/801.html 1 http://www.omega3.su/tovar/801.html
+/apple-touch-icon-120x120.png 1 -
+/tovar/1000.html 1 http://www.omega3.su/tovar/1000.html
+/tovar/037.html 1 http://www.omega3.su/tovar/037.html
+/tovar/032.html 1 http://www.omega3.su/tovar/032.html
+/images/tovar/062_M1.jpg 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 225
+91.227.180.235 816 816 30518513 20171213194615
+176.96.72.104 685 685 28237862 20171213233000
+81.88.222.131 581 581 19267147 20171214022955
+95.158.48.40 368 368 13005497 20171214004846
+46.31.26.50 77 77 1532409 20171211224321
+91.206.30.76 66 66 2422003 20171212133845
+91.200.12.53 44 44 259134 20171202081516
+90.155.205.188 39 39 1336855 20171209230058
+83.220.237.197 37 37 1213594 20171213035013
+109.254.254.10 30 30 1145313 20171209232224
+151.80.238.152 8 8 395996 20171208234411
+94.140.116.189 1 1 49579 20171205003915
+217.69.134.3 8 8 198543 20171212201214
+87.76.239.48 1 1 49367 20171208195126
+5.141.194.159 1 1 49568 20171211115553
+51.15.70.13 2 2 99158 20171201202954
+163.172.45.46 1 1 49579 20171201232903
+193.90.12.115 2 2 72431 20171210150540
+188.226.162.114 2 2 98946 20171209012416
+185.100.86.128 2 2 99158 20171204212307
+185.148.145.90 1 1 49342 20171213182100
+213.183.51.241 1 1 49579 20171204233650
+109.92.189.192 2 2 90346 20171209160928
+18.85.22.204 3 3 148737 20171205073040
+196.54.55.14 1 1 49579 20171203025106
+66.102.7.136 1 1 36614 20171210153013
+2a02:6b8:c09:119b:0:40be:f82d:7e7d 1 1 50077 20171212200752
+66.102.9.134 4 4 198272 20171210232700
+128.30.52.64 2 2 98895 20171207160011
+185.117.215.9 1 1 49579 20171206122058
+201.18.18.173 1 1 49579 20171202221500
+193.19.119.73 1 1 37229 20171202012818
+185.117.118.234 1 1 49579 20171201213615
+173.208.153.75 2 2 99656 20171213003432
+51.15.53.83 1 1 49579 20171205024908
+213.183.48.90 1 1 49579 20171201010305
+109.187.70.8 1 1 49367 20171208164605
+88.200.214.87 5 5 168650 20171212201617
+91.219.237.244 2 2 100154 20171212163355
+80.67.172.162 1 1 49579 20171206154657
+77.247.181.162 5 5 249389 20171213033716
+217.119.22.200 2 2 72374 20171207151003
+34.212.33.41 1 1 50075 20171212031302
+66.102.9.131 1 1 49568 20171210230955
+185.165.168.229 1 1 50077 20171212184155
+185.220.101.5 1 1 50077 20171212223004
+52.53.129.101 2 2 99158 20171204202302
+66.102.8.198 3 3 148252 20171213142351
+13.56.229.65 3 3 148840 20171212200433
+128.72.234.70 1 1 41237 20171201140903
+93.115.95.204 2 2 99158 20171207025753
+83.220.237.193 1 1 49579 20171205205311
+188.122.229.42 21 21 629824 20171207234539
+185.220.101.34 2 2 98792 20171210192402
+188.122.246.151 24 24 799288 20171212142809
+95.163.118.198 1 1 49367 20171208200111
+66.249.90.74 4 4 198272 20171210232729
+192.160.102.169 1 1 49579 20171207025757
+176.77.3.87 1 1 41237 20171203200709
+178.62.4.246 2 2 99158 20171204045653
+185.220.101.1 1 1 50077 20171213040150
+193.90.12.119 1 1 49396 20171210164059
+185.220.101.9 1 1 50075 20171212105420
+65.19.167.130 1 1 49579 20171204225229
+66.102.8.192 2 2 98935 20171210232238
+2c0f:f930:0:3::221 3 3 68006 20171210153142
+66.249.90.70 1 1 49396 20171210174441
+217.170.197.83 2 2 99158 20171207054545
+51.15.39.2 2 2 100154 20171212111321
+185.220.101.16 1 1 50077 20171213061521
+163.172.101.137 2 2 99158 20171206151333
+64.124.32.84 1 1 49579 20171205101347
+85.115.243.48 1 1 49367 20171209092121
+178.20.55.18 1 1 49367 20171208234414
+95.54.213.230 19 19 795720 20171206095955
+46.165.254.166 4 4 198316 20171201221636
+23.101.61.176 10 10 339002 20171213185802
+66.249.90.72 4 4 184916 20171210231956
+216.218.222.12 2 2 98734 20171208151826
+185.227.82.9 2 2 99158 20171206154819
+185.87.185.45 1 1 49579 20171204211020
+139.162.124.207 1 1 49579 20171201181647
+192.42.116.16 1 1 49579 20171203025113
+2a02:6b8:c00:25ad:0:40be:2c06:5081 1 1 22852 20171209165213
+62.182.51.82 22 22 660789 20171213172416
+89.31.57.5 1 1 49579 20171204212201
+54.188.18.139 1 1 49579 20171205140107
+171.25.193.77 1 1 49579 20171205024921
+176.10.99.196 2 2 100154 20171212200205
+198.50.200.135 1 1 49579 20171205101350
+213.61.149.100 1 1 49579 20171202100251
+171.25.193.235 1 1 49579 20171202020140
+104.223.123.98 2 2 100154 20171212190108
+83.220.236.29 25 25 991487 20171208153705
+46.229.170.197 1 1 49579 20171202164709
+104.45.18.178 10 10 310760 20171211154259
+185.224.250.2 2 2 75192 20171212201108
+85.248.227.164 2 2 99158 20171205040422
+178.165.72.177 2 2 99158 20171203180423
+78.106.119.52 1 1 50075 20171211214134
+217.69.137.2 5 5 148799 20171206201203
+66.249.81.1 1 1 49568 20171210231540
+185.163.1.11 7 7 348121 20171212184239
+128.30.52.134 4 4 171526 20171207163652
+137.74.73.179 5 5 247895 20171206172103
+109.172.15.39 2 2 90572 20171211002055
+89.234.157.254 5 5 247460 20171211012845
+51.15.62.146 1 1 49579 20171203230543
+208.94.110.37 1 1 50077 20171212203549
+2a03:6f00:1::5c35:602c 8 8 73228 20171210153057
+185.220.101.12 2 2 98734 20171209034420
+51.15.63.43 2 2 100154 20171213015615
+62.210.129.246 1 1 49579 20171206235355
+163.172.223.200 4 4 200304 20171212230256
+62.109.164.164 1 1 41120 20171207144521
+93.170.72.68 1 1 50075 20171211201231
+66.102.8.195 1 1 49367 20171210153141
+69.164.203.187 1 1 49367 20171207191552
+54.183.130.127 3 3 148726 20171210225602
+142.44.156.128 1 1 49579 20171204192921
+128.30.52.96 4 4 198005 20171207151951
+128.30.52.73 3 3 123531 20171207162957
+95.161.235.229 8 8 279810 20171210163233
+66.249.93.211 6 6 284253 20171210232548
+104.218.63.75 2 2 100154 20171213071854
+128.72.8.218 1 1 41237 20171204165941
+163.172.163.85 5 5 247895 20171206202113
+193.19.119.46 1 1 37229 20171205015657
+51.15.43.205 3 3 148525 20171208105132
+5.136.241.7 10 10 329450 20171203191212
+66.249.93.212 7 7 308226 20171213142150
+37.220.35.202 1 1 49367 20171209030049
+62.210.201.88 1 1 41486 20171212114445
+185.220.101.24 2 2 100154 20171212155326
+178.68.88.201 8 8 330011 20171207102800
+94.29.100.27 1 1 24189 20171201101751
+220.181.132.179 1 1 50075 20171211220557
+178.62.209.55 1 1 49579 20171202042345
+46.248.164.24 2 2 99158 20171201225430
+89.34.237.121 1 1 49579 20171202020152
+109.69.67.17 2 2 100154 20171213094024
+185.28.110.4 18 18 594161 20171214010946
+82.202.249.91 1 1 49342 20171214001244
+85.248.227.165 1 1 49579 20171201213600
+89.222.164.34 1 1 26352 20171212142611
+37.157.162.67 1 1 49368 20171208102721
+199.87.154.255 2 2 99158 20171206223247
+64.113.32.29 1 1 49579 20171206154701
+185.189.14.230 2 2 99158 20171204234559
+128.30.52.72 4 4 197588 20171210194143
+78.109.23.1 2 2 100154 20171212193037
+51.15.87.157 2 2 99158 20171202034243
+79.126.46.177 3 3 121586 20171208145659
+178.140.114.0 1 1 49579 20171205103937
+188.166.66.229 1 1 49367 20171208170327
+106.120.162.108 1 1 50075 20171211220648
+91.221.70.27 11 11 450617 20171209100144
+178.17.170.194 1 1 49579 20171202042342
+207.244.70.35 4 4 197892 20171208230040
+5.42.64.234 10 10 359451 20171208171946
+62.210.13.58 2 2 99158 20171205073037
+5.16.67.112 1 1 49579 20171201202926
+138.246.253.19 3 3 0 20171208052018
+23.129.64.101 1 1 49579 20171201144642
+5.227.7.153 1 1 49568 20171211075339
+66.249.81.4 1 1 49568 20171210231541
+91.146.43.68 1 1 49367 20171208165928
+137.74.169.241 2 2 99158 20171206225647
+46.211.102.254 1 1 22830 20171212065224
+83.242.98.252 1 1 36813 20171201165346
+178.17.170.135 1 1 49579 20171206122043
+128.74.246.1 1 1 43930 20171201011120
+193.171.202.150 2 2 99158 20171206152527
+46.4.81.178 2 2 99158 20171202214752
+66.249.92.72 1 1 49342 20171213142349
+93.115.95.207 2 2 99158 20171204081329
+185.220.101.4 1 1 49568 20171211012858
+180.153.236.189 1 1 50077 20171213075605
+178.17.170.156 2 2 99158 20171204224059
+195.228.45.176 4 4 197892 20171209001149
+178.155.4.52 1 1 49396 20171210182713
+192.36.27.4 4 4 199810 20171213092440
+5.228.128.213 1 1 49579 20171206093935
+195.211.23.211 1 1 49367 20171209230640
+198.96.155.3 1 1 49396 20171210164103
+77.222.108.100 5 5 190878 20171208223614
+85.26.234.252 1 1 41076 20171207193058
+91.218.228.179 1 1 38142 20171201000528
+197.231.221.211 4 4 143762 20171210152642
+193.164.131.95 2 2 99158 20171201224510
+2a02:6b8:b010:d006::1:15 1 1 22852 20171209165213
+2001:4ca0:108:42::19 1 1 0 20171209091657
+51.15.54.136 2 2 99158 20171201145104
+5.9.158.75 5 5 248467 20171213034101
+94.142.242.84 2 2 99158 20171206125738
+192.36.27.6 5 5 248891 20171213012339
+178.155.4.116 4 4 119557 20171208203325
+46.182.18.46 1 1 49579 20171204225224
+87.118.110.170 2 2 99158 20171204195105
+213.202.254.136 1 1 49367 20171208093448
+185.38.14.215 1 1 50077 20171212223015
+178.209.42.84 1 1 50077 20171213040147
+173.254.216.66 5 5 220904 20171213003427
+66.102.7.134 3 3 135406 20171210174440
+46.211.107.48 1 1 49342 20171213211239
+51.15.70.226 2 2 99158 20171201195340
+5.18.220.179 2 2 100152 20171212210155
+185.165.169.23 2 2 100154 20171213075828
+83.220.238.9 2 2 98792 20171210195930
+213.206.60.23 1 1 49568 20171210223205
+2a02:6b8:c0c:2f95:0:40be:896d:84da 1 1 50077 20171212200733
+109.63.207.227 1 1 43930 20171203200709
+176.126.252.11 3 3 148525 20171209012431
+89.234.68.97 6 6 213726 20171204001151
+163.172.4.153 2 2 98946 20171210020925
+66.102.9.128 3 3 148302 20171210231937
+54.245.152.113 1 1 50075 20171212085839
+5.153.137.13 2 2 77292 20171201154216
+95.24.201.54 1 1 39610 20171211160324
+128.69.152.12 1 1 50077 20171212201935
+91.219.237.229 1 1 50077 20171212184152
+94.244.132.228 1 1 49367 20171208193318
+91.242.41.71 1 1 49579 20171204062338
+84.105.18.164 1 1 49579 20171201235847
+5.188.92.2 1 1 36616 20171207215514
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 14
+20171201 79 79 2421015 35
+20171202 137 137 4086812 22
+20171203 37 37 1469546 14
+20171204 73 73 3048356 32
+20171205 26 26 1189040 17
+20171206 241 241 9825427 27
+20171207 440 440 15500439 34
+20171208 169 169 6344206 32
+20171209 115 115 4400330 22
+20171210 585 585 21487751 50
+20171211 600 600 19299202 25
+20171212 392 392 15048325 45
+20171213 435 435 19320316 33
+20171214 9 9 337337 5
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+0s-30s 289
+2mn-5mn 10
+5mn-15mn 19
+1h+ 21
+15mn-30mn 24
+30mn-1h 17
+30s-2mn 13
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 65
+/ 958 47033786 311 265
+/admin/index.php 819 34433745 1 8
+/index.php 429 6939744 5 10
+/contact-us/ 107 2414016 13 17
+/delivery-pay 100 2598774 3 10
+/katalog/ 89 3272953 4 3
+/admin/ 83 478305 4 2
+/katalog/sostav-1 83 3467514 2 3
+/optovikam 51 1166504 1 4
+/nashe-proizvodstvo 39 967598 0 3
+/kosmetologiya/maslo-posle-ozhogov 11 376173 0 1
+/vidy-masel/maslo-zarodyshej-pshenicy 35 1209745 3 5
+/vidy-masel/maslo-chesnochnoe 7 260542 2 2
+/vidy-masel/maslo-orehovoe 8 308939 2 1
+/uslovija-oferti 30 2016780 0 3
+/dlya-kogo/dlya-pozhilyh-ludej 5 121410 0 1
+/vitaminy/vitamin-a 3 73215 0 0
+/katalog/sostav-4 8 334031 0 0
+/vidy-masel/maslo-amarantovoe 19 701990 1 1
+/massazh/dlya-massazha 17 515039 1 2
+/vidy-masel/maslo-lnyanoe 27 1063341 1 1
+/vitaminy/vitamin-d 4 96800 0 0
+/mail.php 1 733 0 0
+/sostav-4 3 123924 0 0
+/vidy-masel/maslo-kunzhutnoe 9 343808 1 1
+/katalog/sostav-2 27 1120733 3 6
+/vidy-masel/maslo-tykvennoe 15 552762 0 2
+/rekviziti 23 512160 1 0
+/dlya-kogo/dlya-vegetariancev 8 194493 0 0
+/htc 1 21650 0 0
+/vidy-masel/maslo-ryzhikovoe 10 366081 0 0
+/sostav-1 13 540289 0 2
+/katalog/sostav-5 6 255629 0 0
+/katalog/sostav-3 16 675509 3 3
+/mailru-domainCVCvRsZ8p6fIK8O0.html 7 217 6 1
+/dlya-kogo/dlya-muzhchin 9 253192 0 2
+/vitaminy/omega3 12 290779 3 5
+/sostav-7 2 82442 0 0
+/katalog/sostav-6 5 211394 0 0
+/dlya-kogo/dlya-detej 6 145389 0 0
+/vidy-masel/maslo-rastoropshi 11 440459 0 0
+/kosmetologiya/maslo-dlya-gub 19 659413 0 1
+/katalog 2 73697 0 1
+/vidy-masel/maslo-oblepihi 6 224380 1 1
+/vitaminy/vitamin-e 7 183132 1 1
+/canon 1 22037 0 0
+/sostav-8 4 164354 0 0
+/sitemap.xml 2 10826 1 0
+/vidy-masel/maslo-podsolnechnoe 10 439178 2 3
+/vidy-masel/maslo-gorchichnoe 17 625430 3 4
+/dlya-kogo/dlya-zhencshin 12 340934 1 4
+/sostav-3 7 291152 0 1
+/uslovija-vozvrata 21 619877 1 0
+/sostav-2 22 904680 8 8
+/dlya-kogo/dlya-syroedov 6 145360 0 0
+/pravila-konfidencialnosti 23 700849 0 0
+/katalog/sostav-7 10 431068 0 0
+/katalog/sostav-8 16 663777 2 3
+/dlya-kogo/dlya-beremennyh 8 261797 0 0
+/sostav-5 3 123928 1 1
+/vidy-masel/maslo-konoplyanoe 9 353568 1 1
+/vidy-masel/maslo-shipovnika 6 225827 0 0
+/sostav-6 4 164580 0 0
+/privacy 1 21588 0 0
+/vitaminy/omega369 6 144083 0 0
+END_SIDER

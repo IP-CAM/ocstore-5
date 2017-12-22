@@ -1,0 +1,47 @@
+<modification>
+	<id>All Products Footer Link</id>
+	<version>1.0</version>
+	<vqmver>2.1.6</vqmver>
+	<author>grgr</author>
+	<file name="catalog/controller/common/footer.php">
+        <operation>
+            <search position="before"><![CDATA[
+$data['text_newsletter'] = $this->language->get('text_newsletter');
+            ]]></search>
+            <add><![CDATA[
+		$data['text_allproducts'] = $this->language->get('text_allproducts');
+            ]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[
+$data['newsletter'] = $this->url->link('account/newsletter', '', 'SSL');
+            ]]></search>
+            <add><![CDATA[
+		$data['allproducts'] = $this->url->link('product/allproducts');
+            ]]></add>
+        </operation>
+	</file>
+	
+	<file name="catalog/language/en-gb/common/footer.php">
+        <operation>
+            <search position="before"><![CDATA[
+$_['text_special']
+            ]]></search>
+            <add><![CDATA[
+				$_['text_allproducts']      = 'All Products';
+            ]]></add>
+        </operation>
+	</file>
+
+	<file name="catalog/view/theme/*/template/common/footer.tpl">
+        <operation>
+            <search position="before" ><![CDATA[
+<li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
+            ]]></search>
+            <add><![CDATA[
+		<li><a href="<?php echo $allproducts; ?>"><?php echo $text_allproducts; ?></a></li>
+            ]]></add>
+        </operation>
+	</file>
+	
+</modification>

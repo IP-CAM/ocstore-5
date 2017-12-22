@@ -1,0 +1,55 @@
+2017-10-05 17:51:58 - callback:  orderid=1
+
+2017-10-05 18:03:13 - callback:  orderid=1
+
+2017-10-06 17:03:39 - callback:  orderid=1
+
+2017-10-06 17:04:41 - callback:  orderid=1
+
+2017-10-06 17:05:08 - callback:  orderid=1
+
+2017-10-06 17:14:58 - callback:  orderid=1
+
+2017-12-06 17:59:22 - PHP Notice:  Undefined variable: ckeditor in /home/c/cc87444/public_html/admin/view/template/extension/module/newsblog_articles.tpl on line 168
+2017-12-06 18:11:55 - PHP Notice:  Undefined variable: ckeditor in /home/c/cc87444/public_html/admin/view/template/extension/module/newsblog_articles.tpl on line 168
+2017-12-06 18:17:01 - PHP Notice:  Undefined variable: ckeditor in /home/c/cc87444/public_html/admin/view/template/extension/module/newsblog_articles.tpl on line 168
+2017-12-06 18:17:32 - PHP Notice:  Undefined variable: ckeditor in /home/c/cc87444/public_html/admin/view/template/extension/module/newsblog_articles.tpl on line 168
+2017-12-06 18:38:50 - PHP Notice:  Undefined variable: ckeditor in /home/c/cc87444/public_html/admin/view/template/extension/module/newsblog_articles.tpl on line 168
+2017-12-14 19:53:59 - PHP Warning:  Invalid argument supplied for foreach() in W:\domains\ocstore\system\library\mail.php on line 21
+2017-12-17 15:55:54 - PHP Notice:  Undefined variable: text_items in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 15:58:40 - PHP Notice:  Undefined variable: product_total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:06:07 - PHP Notice:  Undefined variable: totals in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 81
+2017-12-17 16:06:07 - PHP Warning:  Invalid argument supplied for foreach() in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 81
+2017-12-17 16:06:58 - PHP Notice:  Undefined variable: total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:07:34 - PHP Notice:  Undefined variable: total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:07:43 - PHP Notice:  Undefined variable: total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:11:49 - PHP Notice:  Undefined variable: text_items in W:\domains\ocstore\catalog\view\theme\organic\template\common\cart.tpl on line 4
+2017-12-17 16:14:24 - PHP Notice:  Undefined variable: total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:16:56 - PHP Notice:  Undefined variable: total in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:18:38 - PHP Notice:  Undefined variable: totals in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:18:38 - PHP Warning:  Invalid argument supplied for foreach() in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:20:34 - PHP Notice:  Undefined variable: text_empty in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:25:46 - PHP Notice:  Undefined variable: text_items in W:\domains\ocstore\catalog\view\theme\organic\template\common\cart.tpl on line 7
+2017-12-17 16:26:27 - PHP Notice:  Undefined variable: title in W:\domains\ocstore\catalog\view\theme\organic\template\common\cart.tpl on line 7
+2017-12-17 16:31:13 - PHP Warning:  Missing argument 2 for Cart\Currency::format(), called in W:\domains\ocstore\catalog\controller\common\cart.php on line 136 and defined in W:\domains\ocstore\system\library\cart\currency.php on line 24
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 25
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 25
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 26
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 26
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 27
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 27
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 30
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 30
+2017-12-17 16:31:13 - PHP Warning:  Missing argument 2 for Cart\Currency::format(), called in W:\domains\ocstore\catalog\controller\common\cart.php on line 136 and defined in W:\domains\ocstore\system\library\cart\currency.php on line 24
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 25
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 25
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 26
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 26
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 27
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 27
+2017-12-17 16:31:13 - PHP Notice:  Undefined variable: currency in W:\domains\ocstore\system\library\cart\currency.php on line 30
+2017-12-17 16:31:13 - PHP Notice:  Undefined index:  in W:\domains\ocstore\system\library\cart\currency.php on line 30
+2017-12-17 16:34:55 - PHP Notice:  Undefined variable: product in W:\domains\ocstore\catalog\view\theme\organic\template\common\cart.tpl on line 8
+2017-12-17 16:34:55 - PHP Notice:  Undefined variable: product in W:\domains\ocstore\catalog\view\theme\organic\template\common\cart.tpl on line 8
+2017-12-17 16:37:38 - PHP Notice:  Undefined variable: products in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80
+2017-12-17 16:37:38 - PHP Warning:  Invalid argument supplied for foreach() in W:\domains\ocstore\catalog\view\theme\organic\template\common\header.tpl on line 80

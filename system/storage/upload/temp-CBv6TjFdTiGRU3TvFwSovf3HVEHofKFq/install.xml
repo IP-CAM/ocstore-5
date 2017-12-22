@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <id>SVG allow upload, logo</id>
+    <version>0.1</version>
+    <vqmver required="true">2.6.0</vqmver>
+    <author>Michal Landsman</author>
+
+    <file path="admin/controller/common/filemanager.php">
+        <operation info="add svg">
+            <search position="replace">
+                <![CDATA[jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF]]>
+            </search>
+            <add>
+                <![CDATA[jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF,svg,SVG]]>
+            </add>
+        </operation>
+        <operation info="add svg">
+            <search position="after">
+                <![CDATA['jpg',]]>
+            </search>
+            <add>
+                <![CDATA[
+                    'svg',
+                ]]>
+            </add>
+        </operation>
+        <operation info="add svg">
+            <search position="after">
+                <![CDATA['image/jpeg',]]>
+            </search>
+            <add>
+                <![CDATA[
+                    'image/svg+xml',
+                ]]>
+            </add>
+        </operation>        
+    </file>
+
+    <file path="admin/model/tool/image.php">
+        <operation info="add svg render support">
+            <search position="after">
+                <![CDATA[$extension = pathinfo($filename, PATHINFO_EXTENSION);]]>
+            </search>
+            <add>
+                <![CDATA[
+                
+                if('svg' == $extension) {
+
+                    if ($this->request->server['HTTPS']) {
+                        return HTTPS_CATALOG . 'image/' . $filename;
+                    } else {
+                        return HTTP_CATALOG . 'image/' . $filename;
+                    }
+                }
+                
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <file path="system/helper/general.php">
+        <operation info="add svg render support">
+            <search position="before">
+                <![CDATA[function token($length = 32) {]]>
+            </search>
+            <add>
+                <![CDATA[
+                
+                function renderSVG($path) {
+                    
+                    $fullPath   = DIR_IMAGE . $path;
+                    $handle     = fopen($fullPath, "r");
+                    $contents   = fread($handle, filesize($fullPath));
+                    fclose($handle);
+
+                    return $contents;
+                }
+                
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/header.php">
+        <operation info="return svg data">
+            <search position="replace">
+                <![CDATA[$data['logo'] = $server . 'image/' . $this->config->get('config_logo');]]>
+            </search>
+            <add>
+                <![CDATA[
+                    $image =  $this->config->get('config_logo');
+
+                    if (strpos($image, '.svg') !== false) {
+                        $data['logo'] = renderSVG($image);
+                    }else {
+                        $data['logo'] = $server . 'image/' . $image;
+                    }
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <file path="catalog/controller/common/footer.php">
+        <operation info="return svg data">
+            <search position="before">
+                <![CDATA[return $this->load->view('common/footer', $data);]]>
+            </search>
+            <add>
+                <![CDATA[
+                    $image =  $this->config->get('config_logo');
+
+                    if (strpos($image, '.svg') !== false) {
+                        $data['logo'] = renderSVG($image);
+                    }else {
+                        $data['logo'] = $server . 'image/' . $image;
+                    }
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+</modification>
