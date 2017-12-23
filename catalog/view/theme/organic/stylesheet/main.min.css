@@ -1962,7 +1962,7 @@ footer {
     width: 325px;
     height: 86px;
     border-radius: 3px;
-    border: 2px solid #f2f2f2;
+    border: 2px solid #e4dede;
     display: inline-block;
     text-align: center;
     cursor: pointer;
@@ -1989,14 +1989,14 @@ footer {
     border: 0;
     width: 100%;
     height: 1px;
-    background-color: #f2f2f2;
+    background-color: #e4dede;
     margin: 50px 0
 }
 .delivery-wrap .v-money-wrap .v-money-block {
     width: 19%;
     height: 74px;
     border-radius: 3px;
-    border: 2px solid #f2f2f2;
+    border: 2px solid #e4dede;
     display: inline-block;
     text-align: center;
     cursor: pointer
@@ -2035,9 +2035,7 @@ footer {
 .v-money-block {
     position: relative
 }
-.v-money-block:hover .v-money-block-tooltip {
-    visibility: visible
-}
+
 .v-money-block .mfp-bg {
     display: none !important;
 }
@@ -2047,34 +2045,25 @@ footer {
 }
 .v-money-block-tooltip {
     width: 919px;
-    height: 345px;
+    height: auto;
     background-color: #fff;
     border-radius: 4px;
-    box-shadow: 0 0 18px rgba(0, 0, 0, .1);
+    box-shadow: 0 0 18px rgba(0, 0, 0, .4);
     position: absolute;
     text-align: left;
-    padding: 50px 60px;
+    padding: 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    top: -375px;
-    visibility: hidden;
+    bottom: 80px;
+    display: none;
     z-index: 9999;
 }
 .v-money-block-tooltip.right {
-    left: -663px
+    left: -716px
 }
 .v-money-block-tooltip.right:before {
     right: 30px
-}
-.v-money-block-tooltip:before {
-    position: absolute;
-    display: block;
-    content: '';
-    bottom: -19px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #fff
 }
 .page-inside-content .page-inside-text h2 {
     font-family: 'Arial-Black';

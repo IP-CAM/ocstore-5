@@ -87,7 +87,10 @@ $(document).ready(function(){
     });
     $( ".left-menu-wrapper .toggle-category span" ).click(function(e) {
         event.preventDefault();
-        $('.left-menu-wrapper .v-hide-m').toggle("slide, { direction: left }, 500;");
+        $('.left-menu-wrapper .v-hide-m').toggle();
+    });
+    $('.v-money-block').hover(function (e) {
+        $(this).children('.v-money-block-tooltip').slideToggle();
     });
     $('#toggle').click(function(e){
         event.preventDefault();
