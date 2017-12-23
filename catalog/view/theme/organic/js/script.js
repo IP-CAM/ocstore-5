@@ -87,7 +87,7 @@ $(document).ready(function(){
     });
     $( ".left-menu-wrapper .toggle-category span" ).click(function(e) {
         event.preventDefault();
-        $('.left-menu-wrapper .v-hide-m').slideToggle();
+        $('.left-menu-wrapper .v-hide-m').toggle("slide");
     });
     $('#toggle').click(function(e){
         event.preventDefault();
