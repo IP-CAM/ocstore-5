@@ -129,11 +129,12 @@ class ControllerCommonCart extends Controller {
 		}
 
 		$data['totals'] = array();
-
+        $int = str_replace('р.','',$total['text']);
+        $int = trim(str_replace(' ','',$int));
 		foreach ($totals as $total) {
 			$data['totals'][] = array(
 				'title' => $total['title'],
-				'text'  => $this->currency->format($total['value'], $this->session->data['currency']),
+				'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
 			);
 		}
 

@@ -4,12 +4,11 @@
   </div>
   <div id="collapse-shipping" class="panel-collapse collapse">
     <div class="panel-body">
-      <p><?php echo $text_shipping; ?></p>
+
       <div class="form-horizontal">
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="input-country"><?php echo $entry_country; ?></label>
           <div class="col-sm-10">
-            <select name="country_id" id="input-country" class="form-control">
+            <select name="country_id" id="input-country" class="form-control input-main-site">
               <option value=""><?php echo $text_select; ?></option>
               <?php foreach ($countries as $country) { ?>
               <?php if ($country['country_id'] == $country_id) { ?>
@@ -22,19 +21,17 @@
           </div>
         </div>
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="input-zone"><?php echo $entry_zone; ?></label>
           <div class="col-sm-10">
-            <select name="zone_id" id="input-zone" class="form-control">
+            <select name="zone_id" id="input-zone" class="form-control input-main-site">
             </select>
           </div>
         </div>
         <div class="form-group required">
-          <label class="col-sm-2 control-label" for="input-postcode"><?php echo $entry_postcode; ?></label>
           <div class="col-sm-10">
-            <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>*" id="input-postcode" class="form-control" />
+            <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>*" id="input-postcode" class="form-control input-main-site" />
           </div>
         </div>
-        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_quote; ?></button>
+        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-orange"><?php echo $button_quote; ?></button>
       </div>
       <script type="text/javascript"><!--
 $('#button-quote').on('click', function() {

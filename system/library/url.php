@@ -17,7 +17,7 @@ class Url {
 		if ($this->ssl && $secure) {
 			$url = $this->ssl . 'index.php?route=' . $route;
 		} else {
-			$url = $this->url . 'index.php?route=' . $route;
+            $url = $this->ssl . 'index.php?route=' . $route;
 		}
 		
 		if ($args) {

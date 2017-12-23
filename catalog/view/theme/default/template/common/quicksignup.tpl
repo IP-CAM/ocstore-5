@@ -47,7 +47,7 @@
 										<div>
 											<button type="button" class="btn btn-primary createaccount modal-submit"  data-loading-text="<?php echo $text_loading; ?>" ><?php echo $button_continue; ?></button>
 											<p class="pol">
-												<input type="checkbox" required="">
+												<input type="checkbox" name="agree" value="1" />
 												Нажимая кнопку отправить или заказать Вы соглашаетесь с нашей <a href="https://omega3.su/pravila-konfidencialnosti" target="_blank">Политикой конфиденциальности</a>
 											</p>
 										</div>

@@ -156,7 +156,7 @@
             <?php } ?>
             <div class="main-slider-wrap-info-buttons">
               <a href="javascript:void(0);" class="add-fav" onclick="wishlist.add('<?php echo $product_id; ?>');"></a>
-              <a href="javascript:void(0);" class="buy" id="button-cart">купить</a>
+              <a href="javascript:void(0);" class="buy" id="button-cart" onClick="window.location.reload()">купить</a>
             </div>
             <div class="form-group">
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />

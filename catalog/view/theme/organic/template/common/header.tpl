@@ -164,12 +164,17 @@
     <?php } ?>
         <div class="contacts-left-wrap">
             <div class="contacts-left-block inline-popups" style="margin-top: 35px;">
+                <?php if (!$logged) { ?>
                 <div class="buttons-left-sidebar">
-                    <a href="#test-modal1" class="btn btn-primary button-orange popup-modal btn-log"
-                       data-effect="mfp-3d-unfold">вход</a>
-                    <a href="#test-modal1" class="btn btn-primary button-orange button-green popup-modal btn-reg"
-                       data-effect="mfp-3d-unfold">регистрация</a>
+                <a href="#test-modal1" class="btn btn-primary button-orange popup-modal btn-log"
+                data-effect="mfp-3d-unfold">вход</a>
+                <a href="#test-modal1" class="btn btn-primary button-orange button-green popup-modal btn-reg"
+                data-effect="mfp-3d-unfold">регистрация</a>
                 </div>
+                <?php } else { ?>
+                Имя
+
+                <?php }?>
 
             <div class="contacts-left-title" style="margin: 20px 0;">контакты</div>
 

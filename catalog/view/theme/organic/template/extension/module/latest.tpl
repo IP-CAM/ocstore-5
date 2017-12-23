@@ -61,7 +61,7 @@
                   <a href="javascript:void(0);" class="add-fav" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>"
                      onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></a>
                 </div>
-                <a href="javascript:void(0);" class="add-to-basket" onclick="cart.add('<?php echo $product['product_id']; ?>');">добавить в корзину</a>
+                <a href="javascript:void(0);" class="add-to-basket" onclick="cart.add('<?php echo $product['product_id']; ?>');cartTotal('<?php echo $product['price']; ?>');">добавить в корзину</a>
               </div>
             </div>
           </div>

@@ -139,7 +139,8 @@ header {
     width: 100%;
     background: #fff;
     left: auto;
-    box-sizing: border-box
+    box-sizing: border-box;
+    text-align: center;
 }
 .mt,
 article,
@@ -249,9 +250,12 @@ header .logo img {
     height: 50px
 }
 header .top-menu {
-    float: left;
-    margin-left: 50px;
-    margin-top: 40px
+    position: absolute;
+    margin: auto;
+    left: 0;
+    display: inline-block;
+    right: 120px;
+    top: 40px;
 }
 header .top-menu li {
     display: inline-block;
@@ -279,7 +283,8 @@ header .basket {
     background-color: #2bb21d;
     display: table;
     padding-left: 33px;
-    box-sizing: border-box
+    box-sizing: border-box;
+    text-align: left;
 }
 header .basket .favorite,
 header .basket .total-items {
@@ -1559,6 +1564,40 @@ footer {
     position: relative;
     margin-bottom: 10px
 }
+.content-cart2 h2 {
+    font-family: 'Arial-Black';
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.list-unstyled li{
+    font-family: 'Arial';
+    color: #1a1a1a;
+    font-size: 16px;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 10px
+}
+.list-unstyled li a{
+    color: #1a1a1a;
+    text-decoration: none;
+}
+.list-unstyled {
+    margin-bottom: 20px;
+}
+.list-unstyled li:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fb0;
+    border-radius: 50%;
+    left: 0;
+}
 .main-catalog-tabs .product ul li:before,
 .page-inside-content .page-inside-text ul li:before,
 .seo-wrap .seo-text ul li:before{
@@ -1999,16 +2038,7 @@ footer {
     visibility: visible
 }
 .v-money-block .mfp-bg {
-    visibility: hidden;
-    position: fixed;
-    background: #0b0b0b;
-    opacity: .8;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    transition:visibility 0s linear 0.1s;
+    display: none !important;
 }
 .v-money-block:hover .mfp-bg {
     visibility: visible;
@@ -2029,7 +2059,6 @@ footer {
     top: -375px;
     visibility: hidden;
     z-index: 9999;
-    transition:visibility 0s linear 0.5s;
 }
 .v-money-block-tooltip.right {
     left: -663px
@@ -2525,6 +2554,9 @@ footer {
     font-family: 'Arial-Black';
     font-size: 18px
 }
+.login-block .panel-body {
+    padding: 10px 0;
+}
 .text-total-cart span {
     margin-left: 8px
 }
@@ -2604,11 +2636,18 @@ footer {
 .left-menu-wrapper.dynamic_s .toggle-category span {
     padding: 0
 }
-.col-sm-6 {
+.col-sm-6,
+.row login-block{
     width: 50%;
     float: left;
     padding-right: 15px;
     padding-left: 15px
+}
+.row.login-block .accordion-toggle{
+    color: #ffba00;
+    font-size: 16px;
+    margin-bottom: 6px;
+    display: block;
 }
 .login-block {
     padding: 35px
@@ -2790,9 +2829,7 @@ footer {
 .sert-5 {
     width: 82px
 }
-.v-cart-total {
-    padding: 50px 20px
-}
+
 .success-cart h1,
 .v-cart-total-title {
     font-family: 'Arial-Black';
@@ -3029,6 +3066,26 @@ footer {
     .mb {
         margin-bottom: 10px
     }
+    .left-menu-wrapper ul li span {
+        height: 50px;
+    }
+    .contacts-left-wrap .contacts-left-title {
+        margin: 10px 0!important;
+    }
+    .contacts-left-wrap .contacts-left-block {
+        margin-top: 10px !important;
+    }
+    .contacts-left-wrap .contacts-left-block .contacts-left-block-phone {
+        font-size: 18px;
+    }
+    .contacts-left-wrap .contacts-left-block .contacts-left-block-mail {
+        font-size: 18px;
+    }
+    .buttons-left-sidebar .button-orange {
+        height: 32px;
+        line-height: 32px;
+    }
+
 }
 @media only screen and (max-width: 1230px) {
     .left-menu-wrapper .toggle-category,
@@ -3282,15 +3339,26 @@ footer {
     header .basket {
         float: none;
         display: table;
-        width: 100%;
+        width: 167px;
         clear: both;
         text-align: center;
         padding: 0;
-        height: 64px
+        height: 64px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 11px;
+    }
+    header .basket .total-items:before {
+        display: none;
+    }
+    .total-price-head {
+        padding-left: 25px;
     }
     header .basket .favorite,
     header .basket .total-items {
-        padding: 0 24px;
+        padding: 0;
         width: 50%!important
     }
     #toggle {
