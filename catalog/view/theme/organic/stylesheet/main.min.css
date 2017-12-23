@@ -380,7 +380,8 @@ header .basket .favorite i {
     font-size: 12px
 }
 .top-menu-toggle ul li:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
+    margin-right: 20px;
 }
 .top-menu-toggle:hover ul {
     top: 25px;
