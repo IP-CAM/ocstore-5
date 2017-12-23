@@ -3460,7 +3460,7 @@ footer {
         left: -115px;
         right: 0;
         margin: auto;
-        z-index:99999;
+        z-index:999;
     }
     .left-menu-wrapper .toggle-category span i {
         width: 44px;

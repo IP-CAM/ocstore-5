@@ -75,6 +75,9 @@ $(document).ready(function(){
         $('.main-slider-wrap').toggleClass( "active" );
         $(this).toggleClass('hiden');
     });
+    $('#menu .close').click(function(){
+        $('#toggle').click();
+    });
     $( ".left-menu-wrapper ul li span" ).click(function(e) {
         event.preventDefault();
         $(this).next('ul').slideToggle();
