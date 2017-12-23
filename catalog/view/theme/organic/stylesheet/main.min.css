@@ -3260,6 +3260,10 @@ footer {
     }
 }
 @media only screen and (max-width: 900px) {
+    .login-block .col-3 {
+        width: 100%;
+        padding: 0;
+    }
     .video-block-wrap .video-block {
         display: block
     }
@@ -3332,6 +3336,10 @@ footer {
     }
 }
 @media only screen and (max-width: 767px) {
+    .button-orange,
+    .button-green {
+        width: 100%;
+    }
     .main-catalog-tabs .nav-tabs li {
         margin: 20px;
         display: block
