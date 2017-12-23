@@ -173,7 +173,7 @@
                                                                                         <tbody>
             <?php foreach ($totals as $total) { ?>
             <tr class="subtotal">
-              <td class="name subtotal"><strong><?php echo $total['title']; ?>:</strong></td>
+              <td class="name subtotal"><strong><?php echo $total['title']; ?></strong></td>
               <td class="price"><?php echo $total['text']; ?></td>
             </tr>
             <?php } ?>
