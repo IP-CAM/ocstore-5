@@ -1,13 +1,11 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h4 class="panel-title"><a href="#collapse-voucher" data-toggle="collapse" data-parent="#accordion" class="accordion-toggle"><?php echo $heading_title; ?> <i class="fa fa-caret-down"></i></a></h4>
-  </div>
-  <div id="collapse-voucher" class="panel-collapse collapse">
-    <div class="panel-body">
+
+
+  <div id="collapse-voucher">
+
       <div class="input-group">
         <input type="text" name="voucher" value="<?php echo $voucher; ?>" placeholder="<?php echo $entry_voucher; ?>" id="input-voucher" class="form-control input-main-site" />
         <span class="input-group-btn">
-        <input type="submit" value="<?php echo $button_voucher; ?>" id="button-voucher" data-loading-text="<?php echo $text_loading; ?>"  class="btn btn-primary button-orange" />
+        <input type="submit" value="<?php echo $button_voucher; ?>" id="button-voucher" data-loading-text="<?php echo $text_loading; ?>"  class="btn btn-primary button-orange button-orange-pay"/>
         </span> </div>
       <script type="text/javascript"><!--
 $('#button-voucher').on('click', function() {
@@ -38,6 +36,6 @@ $('#button-voucher').on('click', function() {
   });
 });
 //--></script>
-    </div>
+
   </div>
-</div>
+

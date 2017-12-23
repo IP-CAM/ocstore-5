@@ -2549,6 +2549,16 @@ footer {
     margin-bottom: 40px;
     line-height: 24px
 }
+.login-block .col-3 {
+    width: 29.8%;
+    float: left;
+    padding: 0 15px;
+}
+.button-orange-pay {
+    height: 40px !important;
+    line-height: 40px !important;
+    margin-bottom: 10px;
+}
 .login-block h2,
 .text-total-cart span {
     font-family: 'Arial-Black';
@@ -2704,6 +2714,10 @@ footer {
 .success-cart p a,
 .v-cart-total-info a {
     color: #ffba00
+}
+.v-cart-total div:nth-child(1),
+.v-cart-total div:nth-child(2) {
+    display: none;
 }
 .standart-link:hover {
     text-decoration: none
@@ -3530,6 +3544,7 @@ footer {
     .login-block {
         padding: 15px 0
     }
+
     .col-sm-6 {
         padding: 0;
         width: 100%;

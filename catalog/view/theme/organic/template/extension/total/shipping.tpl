@@ -1,4 +1,4 @@
-<div class="panel panel-default">
+<div class="panel panel-default" style="display: none;">
   <div class="panel-heading">
     <h4 class="panel-title"><a href="#collapse-shipping" class="accordion-toggle" data-toggle="collapse" data-parent="#accordion"><?php echo $heading_title; ?> <i class="fa fa-caret-down"></i></a></h4>
   </div>
@@ -31,7 +31,7 @@
             <input type="text" name="postcode" value="<?php echo $postcode; ?>" placeholder="<?php echo $entry_postcode; ?>*" id="input-postcode" class="form-control input-main-site" />
           </div>
         </div>
-        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-orange"><?php echo $button_quote; ?></button>
+        <button type="button" id="button-quote" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary button-orange" style="margin-bottom: 10px;"><?php echo $button_quote; ?></button>
       </div>
       <script type="text/javascript"><!--
 $('#button-quote').on('click', function() {
