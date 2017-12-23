@@ -3178,6 +3178,7 @@ footer {
     }
     .left-menu-wrapper .toggle-category span,
     .left-menu-wrapper.dynamic_s .toggle-category span {
+        width: 64px;
         text-align: center;
         font-family: 'Arial';
         color: #fff;
@@ -3336,22 +3337,29 @@ footer {
         height: 128px;
         background-size: cover!important
     }
+    header .basket .favorite {
+        text-align: right;
+        padding-right: 8px !important;
+    }
     header .basket {
         float: none;
         display: table;
-        width: 167px;
+        width: 140px;
+        padding: 0 4px;
         clear: both;
-        text-align: center;
-        padding: 0;
+        text-align: left;
         height: 64px;
         position: absolute;
         margin: 0 auto;
-        left: 0;
+        left: 90px;
         right: 0;
         top: 11px;
     }
     header .basket .total-items:before {
         display: none;
+    }
+    header {
+        background: none;
     }
     .total-price-head {
         padding-left: 25px;
@@ -3363,7 +3371,7 @@ footer {
     }
     #toggle {
         float: right;
-        margin: 43px 20px 0 30px
+        margin: 43px 10px 0 30px
     }
     .main-slider-wrap .bxslider li .slider-text,
     .mt {
@@ -3385,7 +3393,7 @@ footer {
     }
     .left-menu-wrapper,
     .left-menu-wrapper.dynamic_s {
-        position: relative;
+        position: initial;
         top: 0;
         left: 0;
         width: 100%;
@@ -3413,7 +3421,13 @@ footer {
         font-size: 16px;
         display: block;
         padding: 12px 0;
-        background-color: #ffba00
+        background-color: #ffba00;
+        position: absolute;
+        top: -73px;
+        left: -115px;
+        right: 0;
+        margin: auto;
+        z-index:99999;
     }
     .left-menu-wrapper .toggle-category span i {
         width: 44px;

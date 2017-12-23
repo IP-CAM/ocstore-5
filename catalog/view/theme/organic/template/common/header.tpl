@@ -90,7 +90,7 @@
 <!-- LEFT MENU -->
     <div class="left-menu-wrapper clearfix">
         <div class="toggle-category">
-            <span class="desc-mobile"><i></i>Каталог статей</span>
+            <span class="desc-mobile"><i></i></span>
             <ul>
 
 
