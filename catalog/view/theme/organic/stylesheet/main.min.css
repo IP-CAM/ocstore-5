@@ -2531,9 +2531,9 @@ footer {
     position: absolute;
     display: none;
     right: 20px;
-    top: 0;
-    font-size: 50px;
-    font-family: cursive;
+    top: 5px;
+    font-size: 40px;
+    font-family: 'Arial';
     color: #fff;
     cursor: pointer;
     line-height: 1;
