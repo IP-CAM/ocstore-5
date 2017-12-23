@@ -3025,6 +3025,9 @@ footer {
     }
 }
 @media only screen and (max-width: 1285px) {
+    header .top-menu {
+        left: 100px;
+    }
     header {
         padding: 0
     }
