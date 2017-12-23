@@ -2043,6 +2043,9 @@ footer {
     visibility: visible;
     pointer-events: none
 }
+.v-del-wrap .v-money-block-tooltip {
+    bottom: 147px;
+}
 .v-money-block-tooltip {
     width: 919px;
     height: auto;
