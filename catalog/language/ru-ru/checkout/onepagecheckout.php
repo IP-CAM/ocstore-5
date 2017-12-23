@@ -20,7 +20,7 @@ $_['text_confirm']                = 'Оформить заказ';
 $_['text_product']                = 'Наименование товара';
 $_['text_price']                = 'Цена';
 $_['text_quantity']                = 'Количество';
-$_['text_total']                = 'ИТОГО';
+$_['text_total']                = 'Итого:';
 $_['text_notlogged']                 = 'Вы не авторизированы, пожалуйста <span class="inline-popups"><a href="#test-modal1" class="popup-modal btn-log" data-effect="mfp-3d-unfold" style="    color: #ffba00;">авторизируйтесь</a></span> или оформите заказ без авторизации';
 
 // Error

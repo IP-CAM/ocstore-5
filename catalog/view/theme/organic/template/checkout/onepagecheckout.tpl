@@ -89,19 +89,8 @@
                                                                    value="<?php echo $comment ?>" placeholder="Коментарий:">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="fields-group">
-                                                            <?php if ($modules) { ?>
-                                                            <div>
-                                                                <?php foreach ($modules as $module) { ?>
-                                                                <?php echo $module; ?>
-                                                                <?php } ?>
-                                                            </div>
-                                                            <?php } ?>
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                                <div class="row login-block" style="padding: 20px 0;">
+                                                <div class="row login-block" style="padding: 10px 0;">
                                                     <div class="fields-group col-3">
                                                         <?php if($c_logged) {?>
                                                         <input type="text" class="form-control large-field input-main-site" id="firstname-ch" name="firstname"  value="<?php echo $c_name; ?>" readonly="true" />
@@ -130,25 +119,34 @@
 
                                                     </div>
                                                 </div>
+                                                <div class="row login-block" style="padding: 10px 0;">
+                                                    <?php if ($modules) { ?>
+                                                    <div>
+                                                        <?php foreach ($modules as $module) { ?>
+                                                        <?php echo $module; ?>
+                                                        <?php } ?>
+                                                    </div>
+                                                    <?php } ?>
+                                                    <div class="fields-group col-3">
+                                                        <div class="v-cart-total">
+                                                            <?php if (!isset($redirect)) { ?>
+                                                            <?php foreach ($totals as $total) { ?>
+                                                            <div class="v-cart-total-title" style="font-size: 20px;"><?php echo $total['title']; ?></div>
+                                                            <div class="v-cart-total-info" style="border-bottom: none;font-size: 24px;"><?php echo $total['text']; ?></div>
+                                                            <?php } ?>
+                                                            <?php } else { ?>
+                                                            <script type="text/javascript"><!--
+                                                                location = '<?php echo $redirect; ?>';
+                                                                //--></script>
+                                                            <?php } ?>
+
+                                                        </div>
+                                                    </div>
                                             </div>
                                                                         </div>
                                                                        </div>
                                                                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 checkout-data">
                                                                         <div class="cart-info table-responsive">
-                                                                            <div class="v-cart-total" style="float: right;">
-                                                                                <?php if (!isset($redirect)) { ?>
-                                                                                <?php foreach ($totals as $total) { ?>
-                                                                                <div class="v-cart-total-title"><?php echo $total['title']; ?></div>
-                                                                                <div class="v-cart-total-info" style="border-bottom: none;font-size: 24px;"><?php echo $total['text']; ?></div>
-                                                                                <?php } ?>
-                                                                                <?php } else { ?>
-                                                                                <script type="text/javascript"><!--
-                                                                                    location = '<?php echo $redirect; ?>';
-                                                                                    //--></script>
-                                                                                <?php } ?>
-
-                                                                            </div>
-<div class="clearfix"></div>
                                                                             <div id="confirm">
                                                                         <div class="payment">
                                                                             <a href='index.php?route=checkout/cart' style="text-decoration: none;" class="pull-left">

@@ -1,5 +1,5 @@
 
-
+<div class="fields-group col-3">
   <div id="collapse-voucher">
 
       <div class="input-group">
@@ -38,4 +38,5 @@ $('#button-voucher').on('click', function() {
 //--></script>
 
   </div>
+</div>
 
