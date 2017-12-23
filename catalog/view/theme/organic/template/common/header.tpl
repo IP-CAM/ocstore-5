@@ -132,7 +132,7 @@
         </div>
         <?php if ($categories) { ?>
 
-
+        <div class="v-hide-m">
         <ul class="main-r-menu">
             <?php foreach ($categories as $category) { ?>
             <?php if ($category['children']) { ?>
@@ -158,8 +158,8 @@
         <?php } ?>
         <?php } ?>
         </ul>
-
-
+        <div class="close">x</div>
+        </div>
 
     <?php } ?>
         <div class="contacts-left-wrap">

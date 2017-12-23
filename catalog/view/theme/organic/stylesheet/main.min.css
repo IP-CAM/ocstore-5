@@ -2527,6 +2527,18 @@ footer {
     line-height: 1;
     opacity: 1!important
 }
+.v-hide-m .close {
+    position: absolute;
+    display: none;
+    right: 20px;
+    top: 0;
+    font-size: 50px;
+    font-family: cursive;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 1!important
+}
 .v-tot .form-control {
     width: 68px;
     height: 63px;
@@ -3218,7 +3230,7 @@ footer {
         vertical-align: middle;
         position: relative
     }
-    .left-menu-wrapper .main-r-menu,
+    .left-menu-wrapper .v-hide-m,
     .mt {
         display: none
     }
@@ -3337,6 +3349,9 @@ footer {
     }
 }
 @media only screen and (max-width: 767px) {
+    .v-hide-m .close {
+        display: block;
+    }
     .main-catalog-img {
         position: relative;
     }
@@ -3471,11 +3486,17 @@ footer {
         vertical-align: middle;
         position: relative
     }
-    .left-menu-wrapper .main-r-menu {
-        display: none
-    }
     .main-slider-wrap.active {
         right: 0
+    }
+    .v-hide-m {
+        background: #ffba00;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        padding-top: 58px;
     }
     .left-menu-wrapper ul li ul {
         position: relative;
@@ -3489,6 +3510,16 @@ footer {
     }
     .left-menu-wrapper ul li {
         display: block
+    }
+    .left-menu-wrapper ul li span {
+        background-color: #ffba00;
+        border-bottom: 1px solid #b18612;
+    }
+    .left-menu-wrapper ul li span:hover {
+        background-color: #ffba00;
+    }
+    .left-menu-wrapper ul li span i:before {
+        background-color: #b18612;
     }
     .left-menu-wrapper ul li span,
     .left-menu-wrapper ul li ul li a {
