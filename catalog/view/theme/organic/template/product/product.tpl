@@ -6,7 +6,14 @@
       <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
       <?php } ?>
     </ul>
-    <div class="main-slider-wrap-info">
+  <?php if ($thumb) { ?>
+  <?php } ?>
+  <?php if ($images) { ?>
+  <?php foreach ($images as $image) { ?>
+  <img src="<?php echo $image['thumb']; ?>" class="main-catalog-img"/>
+  <?php } ?>
+  <?php } ?>
+  <div class="main-slider-wrap-info">
 
           <h1 class="main-slider-wrap-info-title"><?php echo $heading_title; ?></h1>
           <?php if ($review_status) { ?>
@@ -167,14 +174,7 @@
           </div>
           
      
-    </div> 
-    <?php if ($thumb) { ?>
-    <?php } ?>
-    <?php if ($images) { ?>
-    <?php foreach ($images as $image) { ?>
-    <img src="<?php echo $image['thumb']; ?>" class="main-catalog-img"/>
-    <?php } ?>
-    <?php } ?> 
+    </div>
   </div>
   <div class="main-catalog-tabs">
     <ul class="nav nav-tabs">

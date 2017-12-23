@@ -3337,6 +3337,9 @@ footer {
     }
 }
 @media only screen and (max-width: 767px) {
+    .main-catalog-img {
+        position: relative;
+    }
     .button-orange,
     .button-green {
         width: 100%;
