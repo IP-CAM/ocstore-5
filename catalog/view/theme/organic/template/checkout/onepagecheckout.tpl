@@ -152,7 +152,7 @@
                                                                         <div class="payment">
                                                                             <a href='index.php?route=checkout/cart' style="text-decoration: none;" class="pull-left">
                                                                                 <div id="button-modify" class=" btn btn-lg btn-cancel button-orange button-green">
-                                                                                    Корзина
+                                                                                    Назад
                                                                                 </div>
                                                                             </a>
                                                                         <div id="ajax-button-confirm" class=" btn btn-lg btn-success button-orange pull-right">
