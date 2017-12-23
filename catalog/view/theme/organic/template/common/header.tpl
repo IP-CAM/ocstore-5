@@ -47,6 +47,7 @@
 <body class="<?php echo $class; ?>">
 <!-- HEADER -->
   <header>
+      привет
     <div class="logo">
             <a href="/">
           <img src="<?php echo $logo; ?>" alt="Органик-Голд">
