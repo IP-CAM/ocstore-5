@@ -2044,7 +2044,7 @@ footer {
     pointer-events: none
 }
 .v-del-wrap .v-money-block-tooltip {
-    bottom: 147px;
+    bottom: 157px;
 }
 .v-money-block-tooltip {
     width: 919px;
@@ -2058,12 +2058,12 @@ footer {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    bottom: 80px;
+    bottom: 90px;
     display: none;
     z-index: 9999;
 }
 .v-money-block-tooltip.right {
-    left: -716px
+    right: 0;
 }
 .v-money-block-tooltip.right:before {
     right: 30px
