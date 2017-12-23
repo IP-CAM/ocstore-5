@@ -2962,6 +2962,9 @@ footer {
     .main-catalog-bg {
         min-height: 515px
     }
+    .content-cart {
+        padding: 0 100px 50px 50px;
+    }
     header .top-menu {
         margin-left: 15px
     }
