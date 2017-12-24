@@ -3,7 +3,7 @@ $(document).ready(function(){
 		pager: false,
         controls:false,
         auto: true,
-        pause: 5000,
+        pause: 10000,
         speed: 1500,
         prevText: '\t&lt;',
         nextText: '\&gt;',
