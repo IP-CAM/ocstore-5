@@ -1296,7 +1296,6 @@ footer {
 }
 .footer_bg {
     background-color: #ededed;
-    margin-top: 40px;
 }
 .footer_bg .footer-list-bottom-block {
     display: inline-block;
@@ -3613,7 +3612,7 @@ footer {
         min-height: 84px;
         box-shadow: none;
     }
-    header .logo {
+    .header .logo {
         margin-top: 18px;
     }
     .main-slider-wrap .bxslider li h1 {
