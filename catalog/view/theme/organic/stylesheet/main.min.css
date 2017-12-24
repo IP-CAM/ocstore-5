@@ -2031,7 +2031,8 @@ footer {
 }
 .delivery-wrap .v-money-wrap .v-money-block .v-money-block-center {
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    padding: 0 20px;
 }
 .delivery-wrap .delivery-img {
     margin: 0 auto 20px;
