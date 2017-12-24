@@ -1,6 +1,6 @@
 <div class="row">
   <div class="collection-wrap collection-wrap-home">
-    <div class="collection-title">золотая коллекция масел</div>
+    <h2 class="collection-title">Омега 3 - выбери свой вкус</h2>
     <div class="collection-slider clearfix">
       <a href="https://omega3.su/katalog/" class="show_all">смотреть все</a>
       <div class="clearfix"></div>
@@ -11,6 +11,7 @@
             <div class="collection-blocks">
               <div class="collection-blocks-inside">
                 <a href="<?php echo $product['href']; ?>" class="open-modal"></a>
+                <span class="tt-latest"><?php echo $product['name']; ?></span>
                 <div class="clearfix"></div>
                 <div class="align-center">
                   <a href="<?php echo $product['href']; ?>" class="ln">
@@ -35,8 +36,7 @@
                     <?php } ?>
                   </div>
                   <div class="info-collection clearfix">
-                    <a href="<?php echo $product['href']; ?>" class="ln pull-left">
-                      <h4 class="l-info"><span><?php echo $product['name']; ?></span></h4></a>&nbsp;
+                    <a href="<?php echo $product['href']; ?>" class="ln pull-left btu">Купить</a>&nbsp;
                     <?php echo $product['weight']; ?> мл
                     <a href="<?php echo $product['href']; ?>" class="ln pull-right"><?php if ($product['price']) { ?>
                       <p class="r-info">

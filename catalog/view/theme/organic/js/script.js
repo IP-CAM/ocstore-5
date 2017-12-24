@@ -1,9 +1,13 @@
 $(document).ready(function(){
 	$('.bxslider').bxSlider({
 		pager: false,
+        controls:false,
+        auto: true,
+        pause: 5000,
+        speed: 1500,
         prevText: '\t&lt;',
         nextText: '\&gt;',
-        onSliderLoad: function(){
+        onSlideBefore: function(){
             $(".bxslider").css("visibility", "visible");
         }
 	});
