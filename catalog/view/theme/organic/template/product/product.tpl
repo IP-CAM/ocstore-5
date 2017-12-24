@@ -176,83 +176,74 @@
      
     </div>
   </div>
-  <div class="main-catalog-tabs">
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
-      <?php if ($attribute_groups) { ?>
-      <li><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
+<div class="main-catalog-tabs">
+
+  <?php if ($attribute_groups) { ?>
+  <div class="feature">
+    <ul>
+      <?php foreach ($attribute_groups as $attribute_group) { ?>
+
+      <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
+      <li>
+        <div class="left-col"><i></i><?php echo $attribute['name']; ?></div>
+        <div class="right-col"><?php echo $attribute['text']; ?></div>
+      </li>
+
       <?php } ?>
-      <?php if ($review_status) { ?>
-      <li><a href="#tab-review" data-toggle="tab"><?php echo $tab_review; ?></a></li>
+
       <?php } ?>
     </ul>
-    <div class="tab-content">
-      <?php if ($attribute_groups) { ?>
-      <div class="tab-pane active feature" id="tab-specification">
-        <ul>
-          <?php foreach ($attribute_groups as $attribute_group) { ?>
-
-          <?php foreach ($attribute_group['attribute'] as $attribute) { ?>
-          <li>
-            <div class="left-col"><i></i><?php echo $attribute['name']; ?></div>
-            <div class="right-col"><?php echo $attribute['text']; ?></div>
-          </li>
-
-          <?php } ?>
-
-          <?php } ?>
-        </ul>
-      </div>
-      <?php } ?>
-      <div class="tab-pane product" id="tab-description"><?php echo $description; ?></div>
-      <?php if ($review_status) { ?>
-      <div class="tab-pane reviews" id="tab-review">
-        <form class="form-horizontal" id="form-review">
-          <div id="review"></div>
-          <?php if ($review_guest) { ?>
-          <div class="review-form clearfix">
-            <div class="form-r">
-              <h2 class="review-form-title"><?php echo $text_write; ?></h2>
-              <div class="form-group required">
-                <div class="col-sm-12">
-                  <input type="text" name="name" value="<?php echo $customer_name; ?>" id="input-name" class="review-form-input" placeholder="<?php echo $entry_name; ?>*"/>
-                </div>
-              </div>
-              <div class="form-group required">
-                <div class="col-sm-12">
-                  <textarea name="text" rows="5" id="input-review" class="review-form-text" placeholder="<?php echo $entry_review; ?>"></textarea>
-                </div>
-              </div>
-              <div class="form-group required">
-                <div class="col-sm-12">
-                  <input type="radio" name="rating" value="1" />
-                  &nbsp;
-                  <input type="radio" name="rating" value="2" />
-                  &nbsp;
-                  <input type="radio" name="rating" value="3" />
-                  &nbsp;
-                  <input type="radio" name="rating" value="4" />
-                  &nbsp;
-                  <input type="radio" name="rating" value="5" />
-                &nbsp;Оцените продукт по 5 бальной шкале</div>
-              </div>
-
-              <?php echo $captcha; ?>
-              <div class="buttons ">
-                <div>
-                  <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="review-form-submit"><?php echo $button_continue; ?></button>
-                </div>
-              </div>
+  </div>
+  <?php } ?>
+  <div class="product"><?php echo $description; ?></div>
+  <?php if ($review_status) { ?>
+  <div class="reviews" id="tab-review">
+    <form class="form-horizontal" id="form-review">
+      <?php if ($review_guest) { ?>
+      <div class="review-form clearfix">
+        <div class="form-r">
+          <h2 class="review-form-title"><?php echo $text_write; ?></h2>
+          <div class="form-group required">
+            <div class="col-sm-12">
+              <input type="text" name="name" value="<?php echo $customer_name; ?>" id="input-name" class="review-form-input" placeholder="<?php echo $entry_name; ?>*"/>
             </div>
           </div>
-          <?php } else { ?>
-          <?php echo $text_login; ?>
-          <?php } ?>
-        </form>
+          <div class="form-group required">
+            <div class="col-sm-12">
+              <textarea name="text" rows="5" id="input-review" class="review-form-text" placeholder="<?php echo $entry_review; ?>"></textarea>
+            </div>
+          </div>
+          <div class="form-group required">
+            <div class="col-sm-12">
+              <input type="radio" name="rating" value="1" />
+              &nbsp;
+              <input type="radio" name="rating" value="2" />
+              &nbsp;
+              <input type="radio" name="rating" value="3" />
+              &nbsp;
+              <input type="radio" name="rating" value="4" />
+              &nbsp;
+              <input type="radio" name="rating" value="5" />
+              &nbsp;Оцените продукт по 5 бальной шкале</div>
+          </div>
+
+          <?php echo $captcha; ?>
+          <div class="buttons ">
+            <div>
+              <button type="button" id="button-review" data-loading-text="<?php echo $text_loading; ?>" class="review-form-submit"><?php echo $button_continue; ?></button>
+            </div>
+          </div>
+        </div>
       </div>
+      <?php } else { ?>
+      <?php echo $text_login; ?>
       <?php } ?>
-    </div>
+      <div id="review"></div>
+    </form>
   </div>
+  <?php } ?>
+
+</div>
   <div class="catalog-page-wrap clearfix">
 
   </div>

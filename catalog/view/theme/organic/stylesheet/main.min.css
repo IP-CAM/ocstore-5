@@ -2965,6 +2965,25 @@ footer {
     }
 }
 @media only screen and (max-width: 1376px) {
+    .main-catalog-bg .main-slider-wrap-info {
+        width: 220px;
+        min-height: 218px;
+        margin-right: 50px;
+    }
+    .main-catalog-bg .main-slider-wrap-info .main-slider-wrap-info-title {
+        font-size: 10px;
+        margin-top: 0;
+    }
+    .main-catalog-bg .main-slider-wrap-info .main-slider-wrap-info-status {
+        margin-top: 10px;
+    }
+    .main-catalog-bg .main-slider-wrap-info .main-slider-wrap-info-price {
+        font-size: 40px;
+        margin: 10px 0 20px 0;
+    }
+    .main-catalog-bg .main-slider-wrap-info .main-slider-wrap-info-buttons .buy {
+        width: 123px;
+    }
     .main-catalog-bg {
         min-height: 515px
     }
