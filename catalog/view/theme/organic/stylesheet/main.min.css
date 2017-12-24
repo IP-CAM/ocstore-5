@@ -3041,7 +3041,9 @@ footer {
 
 @media only screen and (max-width: 1376px) {
     .main-slider-wrap .bxslider li h1 {
-        font-size: 32px;
+        font-size: 20px;
+        padding: 6px 0;
+        top: 10px;
     }
     .img-side iframe {
         width: 50%;
