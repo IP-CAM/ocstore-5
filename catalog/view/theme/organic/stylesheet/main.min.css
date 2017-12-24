@@ -3610,6 +3610,14 @@ footer {
     }
     header {
         background: none;
+        min-height: 84px;
+        box-shadow: none;
+    }
+    header .logo {
+        margin-top: 18px;
+    }
+    .main-slider-wrap .bxslider li h1 {
+        font-size: 12px;
     }
     .total-price-head {
         padding-left: 25px;
