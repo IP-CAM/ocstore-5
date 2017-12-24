@@ -1,15 +1,63 @@
 $(document).ready(function(){
+    (function ($) {
+
+        var bxSlider = jQuery.fn.bxSlider;
+        var $window = $(window);
+
+        jQuery.fn.bxSlider = function () {
+
+            var slider = bxSlider.apply(this, arguments);
+
+            if (!this.length || !arguments[0].mouseDrag) {
+                return slider;
+            }
+
+            var posX;
+            var $viewport = this.parents('.bx-viewport');
+
+            $viewport
+                .on('dragstart', dragHandler)
+                .on('mousedown', mouseDownHandler);
+
+            function dragHandler(e) {
+                e.preventDefault();
+            }
+
+            function mouseDownHandler(e) {
+
+                posX = e.pageX;
+
+                $window.on('mousemove.bxSlider', mouseMoveHandler);
+            }
+
+            function mouseMoveHandler(e) {
+
+                if (posX < e.pageX) {
+                    slider.goToPrevSlide();
+                } else {
+                    slider.goToNextSlide();
+                }
+
+                $window.off('mousemove.bxSlider');
+            }
+
+            return slider;
+        };
+
+    })(jQuery);
 	$('.bxslider').bxSlider({
 		pager: false,
         controls:false,
         auto: true,
         pause: 10000,
         speed: 1500,
+        mouseDrag: true,
         prevText: '\t&lt;',
         nextText: '\&gt;',
-        // onSlideBefore: function(){
-        //     $(".bxslider").css("visibility", "visible");
-        // }
+        onSlideBefore: function(){
+            $(".bxslider").css("visibility", "visible");
+
+        }
 	});
     $(".fancybox").fancybox();
 	var swiper = new Swiper('.swiper-container', {
