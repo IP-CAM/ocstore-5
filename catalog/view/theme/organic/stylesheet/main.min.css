@@ -2003,7 +2003,8 @@ footer {
 }
 .v-dostavka .v-money-block .v-money-block-center {
     display: table-cell;
-    vertical-align: middle
+    vertical-align: middle;
+    padding: 0 20px;
 }
 .delivery-wrap hr {
     display: block;
