@@ -49,7 +49,7 @@ $(document).ready(function(){
 		pager: false,
         controls:false,
         auto: true,
-        pause: 10000,
+        //pause: 10000,
         speed: 1500,
         mouseDrag: true,
         prevText: '\t&lt;',
