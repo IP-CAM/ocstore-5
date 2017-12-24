@@ -7,9 +7,9 @@ $(document).ready(function(){
         speed: 1500,
         prevText: '\t&lt;',
         nextText: '\&gt;',
-        onSlideBefore: function(){
-            $(".bxslider").css("visibility", "visible");
-        }
+        // onSlideBefore: function(){
+        //     $(".bxslider").css("visibility", "visible");
+        // }
 	});
     $(".fancybox").fancybox();
 	var swiper = new Swiper('.swiper-container', {
