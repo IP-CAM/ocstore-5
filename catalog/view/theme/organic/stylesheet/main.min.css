@@ -135,7 +135,7 @@ header {
     box-shadow: 0 0 16px rgba(0, 0, 0, .4);
     position: fixed;
     padding: 0 130px;
-    z-index: 999;
+    z-index: 9999;
     width: 100%;
     background: #fff;
     left: auto;
@@ -245,6 +245,9 @@ img {
 header .logo {
     float: left;
     margin-top: 6px
+}
+header .logo a {
+    display: block;
 }
 header .logo img {
     height: 50px
@@ -393,7 +396,7 @@ header .basket .favorite i {
     float: left;
     width: 16.4142%;
     position: fixed;
-    z-index: 99;
+    z-index: 999;
     height: 100%;
     box-shadow: 0px 0px 30px #000;
     left: 0;
@@ -606,7 +609,7 @@ header .basket .favorite i {
     background-size: cover!important
 }
 .bxw h1 {
-    position: absolute;
+    position: relative;
     text-align: center;
     font-family: 'Arial-Black';
     font-size: 40px;
@@ -619,7 +622,7 @@ header .basket .favorite i {
     top: 30px;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: 0 20px;
     z-index: 99;
 }
 .main-slider-wrap .bxslider li.first-slide {
@@ -3060,7 +3063,7 @@ footer {
     .bxw h1 {
         font-size: 20px;
         padding: 6px 0;
-        top: 10px;
+        top: 20px;
     }
     .img-side iframe {
         width: 50%;
@@ -5309,7 +5312,7 @@ button.swiper-pagination-bullet {
     }
 }
 .mfp-bg {
-    z-index: 1042;
+    z-index: 99999;
     overflow: hidden;
     position: fixed;
     background: #0b0b0b;
@@ -5325,7 +5328,7 @@ button.swiper-pagination-bullet {
     top: 0
 }
 .mfp-wrap {
-    z-index: 1043;
+    z-index: 999999;
     outline: 0!important;
     -webkit-backface-visibility: hidden;
     position: fixed
