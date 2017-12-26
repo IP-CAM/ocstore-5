@@ -2953,6 +2953,9 @@ footer {
     position: relative;
     top: -10px;
 }
+.reviews-main .bx-wrapper .bx-viewport {
+    height: auto !important;
+}
 @media only screen and (max-width: 1600px) {
     .img-side iframe{
         width: 100%;
