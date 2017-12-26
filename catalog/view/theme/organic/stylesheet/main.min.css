@@ -3351,7 +3351,8 @@ footer {
 }
 
 @media only screen and (max-width: 1024px) {
-    .main-slider-wrap .bxslider li {
+    .main-slider-wrap .bxslider li,
+    {
         height: auto !important
     }
 
@@ -3649,11 +3650,12 @@ footer {
     .mt {
         display: none
     }
-    .main-slider-wrap .bxslider li {
+    .main-slider-wrap .bxslider li,
+    .main-slider-wrap .bx-wrapper .bx-viewport {
         height: 243px!important;
         background-size: 100%!important
     }
-    .main-slider-wrap .bx-wrapper {
+    .main-slider-wrap .bx-wrapper{
         margin-bottom: 20px!important
     }
     .bx-wrapper .bx-controls-direction a {
