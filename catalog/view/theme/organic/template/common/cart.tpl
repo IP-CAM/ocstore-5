@@ -6,7 +6,7 @@
   </span>
     <div class="total-price-head">
         <?php $sum_Head = 0;foreach ($totals as $total)  {
-            if($total['title'] == 'Итого') continue;
+            if($total['title'] == 'Итого:') continue;
             $int = str_replace('р.','',$total['text']);
             $int = trim(str_replace(' ','',$int));
             $sum_Head += $int;
