@@ -48,9 +48,8 @@ $(document).ready(function(){
 	$('.bxslider').bxSlider({
 		pager: false,
         controls:false,
-        mode: 'fade',
         auto: true,
-        pause: 8000,
+        pause: 10000,
         speed: 1500,
         mouseDrag: true,
         prevText: '\t&lt;',
