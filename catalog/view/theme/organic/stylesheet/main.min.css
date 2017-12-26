@@ -3054,7 +3054,7 @@ footer {
         line-height: 1.4 !important;
         margin-bottom: 4px !important;
     }
-    .main-slider-wrap .bxslider li h1 {
+    .bxw h1 {
         font-size: 20px;
         padding: 6px 0;
         top: 10px;
@@ -3630,7 +3630,7 @@ footer {
     .header .logo {
         margin-top: 18px;
     }
-    .main-slider-wrap .bxslider li h1 {
+    .bxw h1 {
         font-size: 12px;
     }
     .total-price-head {
