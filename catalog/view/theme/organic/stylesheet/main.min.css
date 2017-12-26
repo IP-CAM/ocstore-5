@@ -393,7 +393,7 @@ header .basket .favorite i {
     float: left;
     width: 16.4142%;
     position: fixed;
-    z-index: 9;
+    z-index: 99;
     height: 100%;
     box-shadow: 0px 0px 30px #000;
     left: 0;
@@ -403,6 +403,9 @@ header .basket .favorite i {
 }
 .left-menu-wrapper ul {
     width: 100%
+}
+.bxw {
+    position: relative;
 }
 .collection-wrap .collection-slider .swiper-slide .collection-blocks {
     width: 96%
@@ -602,7 +605,7 @@ header .basket .favorite i {
 .main-slider-wrap .bxslider li {
     background-size: cover!important
 }
-.main-slider-wrap .bxslider li h1 {
+.bxw h1 {
     position: absolute;
     text-align: center;
     font-family: 'Arial-Black';
@@ -617,6 +620,7 @@ header .basket .favorite i {
     left: 0;
     right: 0;
     margin: auto;
+    z-index: 99;
 }
 .main-slider-wrap .bxslider li.first-slide {
     background: url(../image/slider-main-img1.jpg) no-repeat center
@@ -3935,7 +3939,7 @@ footer {
     display: block
 }
 .bx-wrapper .bx-viewport {
-    height: auto!important
+    /*height: auto!important*/
 }
 .bx-wrapper .bx-controls-auto,
 .bx-wrapper .bx-pager {

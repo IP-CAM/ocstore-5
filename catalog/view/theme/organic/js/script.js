@@ -48,15 +48,15 @@ $(document).ready(function(){
 	$('.bxslider').bxSlider({
 		pager: false,
         controls:false,
+        mode: 'fade',
         auto: true,
         pause: 8000,
         speed: 1500,
         mouseDrag: true,
         prevText: '\t&lt;',
         nextText: '\&gt;',
-        onSlideBefore: function(){
+        onSliderLoad: function(){
             $(".bxslider").css("visibility", "visible");
-
         }
 	});
     $(".fancybox").fancybox();
@@ -90,7 +90,7 @@ $(document).ready(function(){
 
 
 	function heightDetect() {
-		$(".main-s .bx-viewport, .bxslider li, .cert-bg").css("height", $(window).height()-84);
+		$(".main-slider-wrap .bx-viewport, .bxslider li, .cert-bg").css("height", $(window).height()-84);
 	};
 	heightDetect();
 	$(window).resize(function() {
