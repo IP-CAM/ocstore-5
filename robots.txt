@@ -26,6 +26,7 @@ Disallow: /*&tracking=
 Disallow: *utm=
 Disallow: *openstat=
 Sitemap: https://omega3.su/sitemap.xml
+http://omega3.su/index.php?route=extension/feed/newsblog_sitemap
 
 User-agent: Yandex
 Disallow: /*route=account/
@@ -52,3 +53,4 @@ Disallow: /*?filter_description=
 Disallow: /*&filter_description=
 Host: https://omega3.su
 Sitemap: https://omega3.su/index.php?route=extension/feed/yandex_sitemap
+http://omega3.su/index.php?route=extension/feed/newsblog_sitemap_yandex
