@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumbs">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"> <?php echo $breadcrumb['text']; ?></a></li>
+    <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+    <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <span>-</span></li><?php } else { ?>
+    <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
     <?php } ?>
   </ul>
   <?php if ($error_warning) { ?>
@@ -16,8 +17,8 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
+    <div id="content" class="<?php echo $class; ?> content-cart"><?php echo $content_top; ?>
+      <h2><?php echo $heading_title; ?></h2>
       <p><?php echo $text_description; ?></p>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
@@ -71,7 +72,7 @@
             <label class="col-sm-2 control-label" for="input-date-ordered"><?php echo $entry_date_ordered; ?></label>
             <div class="col-sm-3">
               <div class="input-group date"><input type="text" name="date_ordered" value="<?php echo $date_ordered; ?>" placeholder="<?php echo $entry_date_ordered; ?>" data-date-format="YYYY-MM-DD" id="input-date-ordered" class="form-control" /><span class="input-group-btn">
-                <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
+                <button type="button" class="btn-default button-orange button-green"><i class="fa fa-calendar"></i></button>
                 </span></div>
             </div>
           </div>
@@ -161,14 +162,14 @@
             <?php } else { ?>
             <input type="checkbox" name="agree" value="1" />
             <?php } ?>
-            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary" />
+            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary button-orange" />
           </div>
         </div>
         <?php } else { ?>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn-default button-orange button-green"><?php echo $button_back; ?></a></div>
           <div class="pull-right">
-            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary" />
+            <input type="submit" value="<?php echo $button_submit; ?>" class="btn btn-primary button-orange" />
           </div>
         </div>
         <?php } ?>

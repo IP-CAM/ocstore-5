@@ -752,6 +752,12 @@ header .basket .favorite i {
 footer {
     position: relative
 }
+.content-cart h2 {
+    font-family: 'Arial-Black';
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
 .catalog-page-wrap .collection-slider .bx-wrapper .bx-controls-direction a,
 .collection-wrap .collection-slider .swiper-button-next,
 .swiper-button-prev {

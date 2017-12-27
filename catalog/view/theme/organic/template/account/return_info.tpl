@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumbs">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+    <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <span>-</span></li><?php } else { ?>
+    <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
     <?php } ?>
   </ul>
   <div class="row"><?php echo $column_left; ?>
@@ -13,9 +14,9 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <table class="table table-bordered table-hover">
+    <div id="content" class="<?php echo $class; ?> content-cart"><?php echo $content_top; ?>
+      <h2><?php echo $heading_title; ?></h2>
+      <table class="table table-bordered table-hover table-product">
         <thead>
           <tr>
             <td class="text-left" colspan="2"><?php echo $text_return_detail; ?></td>
@@ -32,7 +33,7 @@
       </table>
       <h3><?php echo $text_product; ?></h3>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-product">
           <thead>
             <tr>
               <td class="text-left" style="width: 33.3%;"><?php echo $column_product; ?></td>
@@ -51,7 +52,7 @@
       </div>
       <h3><?php echo $text_reason; ?></h3>
       <div class="table-responsive">
-        <table class="list table table-bordered table-hover">
+        <table class="list table table-bordered table-hover table-product">
           <thead>
             <tr>
               <td class="text-left" style="width: 33.3%;"><?php echo $column_reason; ?></td>
@@ -70,7 +71,7 @@
       </div>
       <?php if ($comment) { ?>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-product">
           <thead>
             <tr>
               <td class="text-left"><?php echo $text_comment; ?></td>
@@ -86,7 +87,7 @@
       <?php } ?>
       <h3><?php echo $text_history; ?></h3>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-product">
           <thead>
             <tr>
               <td class="text-left" style="width: 33.3%;"><?php echo $column_date_added; ?></td>
@@ -112,7 +113,7 @@
         </table>
       </div>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary button-orange"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     </div>

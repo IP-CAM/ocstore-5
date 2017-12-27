@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumbs">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+    <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <span>-</span></li><?php } else { ?>
+    <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
     <?php } ?>
   </ul>
   <div class="row"><?php echo $column_left; ?>
@@ -13,8 +14,8 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
+    <div id="content" class="<?php echo $class; ?> content-cart"><?php echo $content_top; ?>
+      <h2><?php echo $heading_title; ?></h2>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <div class="form-group">
@@ -39,9 +40,9 @@
           </div>
         </fieldset>
         <div class="buttons clearfix">
-          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
+          <div class="pull-left"><a href="<?php echo $back; ?>" class="btn-default button-orange button-green"><?php echo $button_back; ?></a></div>
           <div class="pull-right">
-            <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary" />
+            <input type="submit" value="<?php echo $button_continue; ?>" class="btn btn-primary button-orange" />
           </div>
         </div>
       </form>

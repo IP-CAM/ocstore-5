@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumbs">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+    <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <span>-</span></li><?php } else { ?>
+    <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
     <?php } ?>
   </ul>
   <?php if ($success) { ?>
@@ -19,11 +20,11 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> content-cart"><?php echo $content_top; ?>
       <h2><?php echo $text_address_book; ?></h2>
       <?php if ($addresses) { ?>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-product">
           <?php foreach ($addresses as $result) { ?>
           <tr>
             <td class="text-left"><?php echo $result['address']; ?></td>
@@ -36,8 +37,8 @@
       <p><?php echo $text_empty; ?></p>
       <?php } ?>
       <div class="buttons clearfix">
-        <div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-        <div class="pull-right"><a href="<?php echo $add; ?>" class="btn btn-primary"><?php echo $button_new_address; ?></a></div>
+        <div class="pull-left"><a href="<?php echo $back; ?>" class="btn-default button-orange button-green"><?php echo $button_back; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $add; ?>" class="btn btn-primary button-orange"><?php echo $button_new_address; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     </div>

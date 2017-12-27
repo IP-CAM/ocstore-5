@@ -1,8 +1,9 @@
 <?php echo $header; ?>
 <div class="container">
   <ul class="breadcrumbs">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+    <?php foreach ($breadcrumbs as $i=> $breadcrumb) { ?>
+    <?php if($i+1<count($breadcrumbs)) { ?><li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a> <span>-</span></li><?php } else { ?>
+    <li><?php echo $breadcrumb['text']; ?></li><?php } ?>
     <?php } ?>
   </ul>
   <?php if ($success) { ?>
@@ -23,9 +24,9 @@
     <?php } else { ?>
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
+    <div id="content" class="<?php echo $class; ?> content-cart"><?php echo $content_top; ?>
       <h2><?php echo $heading_title; ?></h2>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover table-product">
         <thead>
           <tr>
             <td class="text-left" colspan="2"><?php echo $text_order_detail; ?></td>
@@ -47,7 +48,7 @@
           </tr>
         </tbody>
       </table>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover table-product">
         <thead>
           <tr>
             <td class="text-left" style="width: 50%; vertical-align: top;"><?php echo $text_payment_address; ?></td>
@@ -66,7 +67,7 @@
         </tbody>
       </table>
       <div class="table-responsive">
-        <table class="table table-bordered table-hover">
+        <table class="table table-bordered table-hover table-product">
           <thead>
             <tr>
               <td class="text-left"><?php echo $column_name; ?></td>
@@ -92,7 +93,7 @@
               <td class="text-right"><?php echo $product['price']; ?></td>
               <td class="text-right"><?php echo $product['total']; ?></td>
               <td class="text-right" style="white-space: nowrap;"><?php if ($product['reorder']) { ?>
-                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary"><i class="fa fa-shopping-cart"></i></a>
+                <a href="<?php echo $product['reorder']; ?>" data-toggle="tooltip" title="<?php echo $button_reorder; ?>" class="btn btn-primary button-orange"><i class="fa fa-shopping-cart"></i></a>
                 <?php } ?>
                 <a href="<?php echo $product['return']; ?>" data-toggle="tooltip" title="<?php echo $button_return; ?>" class="btn btn-danger"><i class="fa fa-reply"></i></a></td>
             </tr>
@@ -125,7 +126,7 @@
         </table>
       </div>
       <?php if ($comment) { ?>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover table-product">
         <thead>
           <tr>
             <td class="text-left"><?php echo $text_comment; ?></td>
@@ -140,7 +141,7 @@
       <?php } ?>
       <?php if ($histories) { ?>
       <h3><?php echo $text_history; ?></h3>
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover table-product">
         <thead>
           <tr>
             <td class="text-left"><?php echo $column_date_added; ?></td>
@@ -166,7 +167,7 @@
       </table>
       <?php } ?>
       <div class="buttons clearfix">
-        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
+        <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary button-orange"><?php echo $button_continue; ?></a></div>
       </div>
       <?php echo $content_bottom; ?></div>
     </div>
