@@ -29,6 +29,7 @@
 <meta property="og:site_name" content="<?php echo $name; ?>" />
     <link href="catalog/view/theme/organic/stylesheet/main.min.css" rel="stylesheet">
     <script src="catalog/view/theme/organic/js/main.min.js"></script>
+    <script src="catalog/view/theme/organic/js/jquery.sticky-sidebar.min.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="catalog/view/theme/organic/js/script.js"></script>
 <?php foreach ($styles as $style) { ?>

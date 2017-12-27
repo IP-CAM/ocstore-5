@@ -204,4 +204,8 @@ $(document).ready(function(){
             }));
         });
     }
+    $('.page-inside-sidebar').stickySidebar({
+        topSpacing: -50,
+        bottomSpacing: 0
+    });
 });
