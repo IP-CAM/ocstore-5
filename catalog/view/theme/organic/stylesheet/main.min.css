@@ -352,14 +352,17 @@ header .basket .favorite i {
 .top-menu-toggle {
     position: relative
 }
-.top-menu-toggle:before {
+.top-menu-toggle .top-menu-toggle-link {
+    padding-right: 13px;
+}
+.top-menu-toggle .top-menu-toggle-link:before {
     position: absolute;
     display: block;
     content: '';
     background: url(../image/arrow_normal.png);
     width: 7px;
     height: 4px;
-    right: -13px;
+    right: 0px;
     top: 6px
 }
 .top-menu-toggle ul {

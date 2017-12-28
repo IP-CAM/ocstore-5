@@ -56,7 +56,7 @@
     <ul class="top-menu">
       <li><a href="/">Главная</a></li>
       <li class="top-menu-toggle">
-                <a href="https://omega3.su/katalog/">Каталог</a>
+                <a href="https://omega3.su/katalog/" class="top-menu-toggle-link">Каталог</a>
                 <ul class="submenu">
                     <li><a href="https://omega3.su/katalog/sostav-1">Состав №1</a></li>
                     <li><a href="https://omega3.su/katalog/sostav-2">Состав №2</a></li>
