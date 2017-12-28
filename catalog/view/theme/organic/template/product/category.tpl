@@ -110,7 +110,7 @@
                 <a href="javascript:void(0);" class="add-fav" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>"
                    onclick="wishlist.add('<?php echo $product['product_id']; ?>');"></a>
               </div>
-              <a href="javascript:void(0);" class="add-to-basket" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');">добавить в корзину</a>
+              <a href="javascript:void(0);" class="add-to-basket" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>', window.location.reload());">добавить в корзину</a>
             </div>
           </div>
           <?php } ?>
