@@ -71,11 +71,15 @@
                 <div class="catalog-block">
                     <div class="collection-blocks-inside">
                         <a href="<?php echo $product['href']; ?>" class="open-modal"></a>
+                        <span class="tt-latest"><?php echo $product['name']; ?></span>
                         <div class="clearfix"></div>
-                        <img src="<?php echo $product['thumb']; ?>"
-                             alt="<?php echo $product['name']; ?>"
-                             title="<?php echo $product['name']; ?>"
-                             class="img-responsive"/>
+                        <div class="align-center">
+                            <a href="<?php echo $product['href']; ?>" class="ln">
+                                <img src="<?php echo $product['thumb']; ?>"
+                                     alt="<?php echo $product['name']; ?>"
+                                     title="<?php echo $product['name']; ?>"
+                                     class="img-responsive"/></a>
+                        </div>
 
                         <div class="caption">
                             <div class="rating-stars">
@@ -92,20 +96,21 @@
                                 <?php } ?>
                             </div>
                             <div class="info-collection clearfix">
-                                <h4 class="l-info"><span><?php echo $product['name']; ?></span></h4>&nbsp;
+                                <a href="<?php echo $product['href']; ?>" class="ln pull-left btu">Купить</a>&nbsp;
                                 <?php echo $product['weight']; ?> мл
-                                <?php if ($product['price']) { ?>
-                                <p class="r-info">
-                                    <?php if (!$product['special']) { ?>
-                                    <?php echo $product['price']; ?>
-                                    <?php } else { ?>
-                                    <span class="price-new"><?php echo $product['special']; ?></span> <span
-                                            class="price-old"><?php echo $product['price']; ?></span>
-                                    <?php } ?>
-                                    <?php if ($product['tax']) { ?>
-                                    <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                                    <?php } ?>
-                                </p>
+                                <a href="<?php echo $product['href']; ?>" class="ln pull-right"><?php if ($product['price']) { ?>
+                                    <p class="r-info">
+                                        <?php if (!$product['special']) { ?>
+                                        <?php echo $product['price']; ?>
+                                        <?php } else { ?>
+                                        <span class="price-new"><?php echo $product['special']; ?></span> <span
+                                                class="price-old"><?php echo $product['price']; ?></span>
+                                        <?php } ?>
+                                        <?php if ($product['tax']) { ?>
+                                        <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                                        <?php } ?>
+                                    </p>
+                                </a>
                                 <?php } ?>
                             </div>
 
