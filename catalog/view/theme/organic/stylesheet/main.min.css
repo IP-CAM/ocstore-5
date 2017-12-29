@@ -908,7 +908,7 @@ footer {
 .collection-wrap .collection-slider .catalog-block .collection-blocks-inside,
 .collection-wrap .collection-slider .collection-blocks .collection-blocks-inside {
     border-radius: 3px;
-    box-shadow: 0 0 12px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
     min-height: 353px;
     position: relative;
     z-index: 9;
