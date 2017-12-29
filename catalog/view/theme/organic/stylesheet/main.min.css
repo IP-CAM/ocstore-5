@@ -3184,6 +3184,13 @@ footer {
         font-size: 10px;
         min-width: 95px;
     }
+    .catalog-page-wrap .collection-slider .catalog-block .collection-blocks-inside {
+        min-height: 233px;
+        padding-top: 10px;
+    }
+    .page-inside-sidebar .catalog-page-wrap .collection-slider .catalog-block {
+        margin-bottom: 20px;
+    }
 }
 
 @media only screen and (max-width: 1285px) {
