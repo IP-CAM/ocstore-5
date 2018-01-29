@@ -3656,7 +3656,7 @@ footer {
         left:-115px;
         right:0;
         margin:auto;
-        z-index:999
+        z-index:9999
     }
     .left-menu-wrapper .toggle-category span i {
         width:44px;
@@ -3675,7 +3675,7 @@ footer {
         width:100%;
         height:100%;
         position:fixed;
-        z-index:999;
+        z-index:9999;
         top:0;
         padding-top:58px
     }
