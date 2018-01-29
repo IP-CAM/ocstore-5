@@ -55,13 +55,11 @@ if ($pay_mc) {?>
 		<?php } ?>
 <input type="hidden" name="phone_number" value="<?echo $phone?>" />
 <?php } ?>
+                <div class="pull-right">
+                    <input type="submit" value="<?php echo $button_confirm; ?>" class="btn btn-primary button-orange" />
+                </div>
             </div>
           </div>
 
 <?php } ?>
-  <div class="buttons">
-    <div class="pull-right">
-      <input type="submit" value="<?php echo $button_confirm; ?>" class="btn btn-primary button-orange" />
-    </div>
-  </div>
 </form>
