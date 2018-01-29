@@ -61,7 +61,7 @@ if ($pay_mc) {?>
 <?php } ?>
   <div class="buttons">
     <div class="pull-right">
-      <input type="submit" value="<?php echo $button_confirm; ?>" class="btn btn-primary" />
+      <input type="submit" value="<?php echo $button_confirm; ?>" class="btn btn-primary button-orange" />
     </div>
   </div>
 </form>
