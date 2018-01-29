@@ -46,6 +46,12 @@ class ControllerCommonHeader extends Controller {
 		}
 
 		$this->load->language('common/header');
+
+		//XML
+		$data['quicksignup'] = $this->load->controller('common/quicksignup');
+		$data['signin_or_register'] = $this->language->get('signin_or_register');
+		
+		
 		$data['og_url'] = (isset($this->request->server['HTTPS']) && (($this->request->server['HTTPS'] == 'on') || ($this->request->server['HTTPS'] == '1')) ? HTTPS_SERVER : HTTP_SERVER) . substr($this->request->server['REQUEST_URI'], 1, (strlen($this->request->server['REQUEST_URI'])-1));
 		$data['og_image'] = $this->document->getOgImage();
 
@@ -96,7 +102,15 @@ class ControllerCommonHeader extends Controller {
 
 		$this->load->model('catalog/product');
 
-		$data['categories'] = array();
+		
+                $this->load->language('product/allproduct');
+                $data['categories'][] = array(
+                    'name'     => $this->language->get('all_product'),
+                    'children' => "",
+                    'column'   => 1,
+                    'href'     => $this->url->link('product/allproduct')
+                );
+            
 
 		$categories = $this->model_catalog_category->getCategories(0);
 
@@ -129,6 +143,41 @@ class ControllerCommonHeader extends Controller {
 			}
 		}
 
+
+      	$this->load->model('newsblog/category');
+        $this->load->model('newsblog/article');
+
+		$data['newsblog_categories'] = array();
+
+		$categories = $this->model_newsblog_category->getCategories(0);
+
+		foreach ($categories as $category) {
+			if ($category['settings']) {
+				$settings=unserialize($category['settings']);
+				if ($settings['show_in_top']==0) continue;
+			}
+
+			$articles = array();
+
+			if ($category['settings'] && $settings['show_in_top_articles']) {
+				$filter=array('filter_category_id'=>$category['category_id'],'filter_sub_category'=>true);
+				$results = $this->model_newsblog_article->getArticles($filter);
+
+				foreach ($results as $result) {
+					$articles[] = array(
+						'name'        => $result['name'],
+						'href'        => $this->url->link('newsblog/article', 'newsblog_path=' . $category['category_id'] . '&newsblog_article_id=' . $result['article_id'])
+					);
+				}
+            }
+			$data['categories'][] = array(
+				'name'     => $category['name'],
+				'children' => $articles,
+				'column'   => 1,
+				'href'     => $this->url->link('newsblog/category', 'newsblog_path=' . $category['category_id'])
+			);
+		}
+		
 		$data['language'] = $this->load->controller('common/language');
 		$data['currency'] = $this->load->controller('common/currency');
 		$data['search'] = $this->load->controller('common/search');
