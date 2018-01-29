@@ -1,5 +1,4 @@
 <div class="form-group <?php if ($required) { ?>required<?php } ?> row-<?php echo $id ?>">
-    <label class="control-label <?php echo $page == 'checkout' ? 'col-sm-4' : 'col-sm-2' ?>" for="<?php echo $id ?>"><?php echo $label ?></label>
     <div class="<?php echo $page == 'checkout' ? 'col-sm-8' : 'col-sm-10' ?>">
       <?php if ($type == 'select' || $type == 'select2') { ?>
         <select class="form-control input-main-site" name="<?php echo $name ?>" id="<?php echo $id ?>" <?php echo $bootstrap ? 'data-theme="bootstrap"' : '' ?> <?php echo $type == 'select2' ? 'data-type="select2"' : '' ?> <?php echo $reload ? 'data-onchange="reloadAll"' : 'data-reload-payment-form="true"'?>>
@@ -33,7 +32,7 @@
           <script type="text/javascript">function recaptchaCallback(value){$('#<?php echo $id ?>').val(value).trigger('change')}</script>
           <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>" data-callback="recaptchaCallback"></div>
         <?php } else { ?>
-          <input type="text" class="form-control input-main-site" name="<?php echo $name ?>" id="<?php echo $id ?>" value="" placeholder="<?php echo $placeholder ?>" <?php echo $reload ? 'data-onchange="reloadAll"' : 'data-reload-payment-form="true"'?>>
+          <input type="text" class="form-control input-main-site" name="<?php echo $name ?>" id="<?php echo $id ?>" value="" placeholder="<?php echo $label ?>" <?php echo $reload ? 'data-onchange="reloadAll"' : 'data-reload-payment-form="true"'?>>
           <div class="simple-captcha-container"><img src="index.php?<?php echo $additional_path ?>route=common/simple_connector/captcha&t=<?php echo time() ?>" alt="" id="captcha" /></div>
         <?php } ?>
       <?php } elseif ($type == 'file') { ?>
