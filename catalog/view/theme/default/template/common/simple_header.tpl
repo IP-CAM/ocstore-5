@@ -18,4 +18,6 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?> content-cart order-cart"><?php echo $content_top; ?>
+      <div class="page-inside-content">
       <h1><?php echo $heading_title; ?></h1>
+      </div>
