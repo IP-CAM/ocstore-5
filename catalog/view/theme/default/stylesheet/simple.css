@@ -103,11 +103,8 @@
 }
 .simplecheckout-block {
     clear: both;
-    margin-bottom: 20px;
 }
-.simplecheckout-block-content {
-    padding: 10px;
-}
+
 @media only screen and (min-width:1200px) {
     .simplecheckout-block-content>fieldset:nth-of-type(2),
     .simplecheckout-block-content>fieldset:nth-last-of-type(2) {
@@ -519,7 +516,7 @@
     display: none;
 }
 #simplecheckout_login .simplecheckout-block-content {
-    padding: 5px !important;
+
 }
 #simple_login_layer {
     position:absolute;
