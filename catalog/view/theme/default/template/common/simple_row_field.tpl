@@ -1,5 +1,5 @@
 <div class="form-group <?php if ($required) { ?>required<?php } ?> row-<?php echo $id ?>">
-    <label class="control-label <?php echo $page == 'checkout' ? 'col-sm-4' : 'col-sm-2' ?>" for="<?php echo $id ?>"></label>
+    <label class="control-label <?php echo $page == 'checkout' ? 'col-sm-4' : 'col-sm-2' ?>" for="<?php echo $id ?>"><?php echo $label ?></label>
     <div class="<?php echo $page == 'checkout' ? 'col-sm-8' : 'col-sm-10' ?>">
       <?php if ($type == 'select' || $type == 'select2') { ?>
         <select class="form-control input-main-site" name="<?php echo $name ?>" id="<?php echo $id ?>" <?php echo $bootstrap ? 'data-theme="bootstrap"' : '' ?> <?php echo $type == 'select2' ? 'data-type="select2"' : '' ?> <?php echo $reload ? 'data-onchange="reloadAll"' : 'data-reload-payment-form="true"'?>>
