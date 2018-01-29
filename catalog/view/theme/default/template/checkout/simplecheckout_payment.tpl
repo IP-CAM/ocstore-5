@@ -7,7 +7,7 @@
         <?php if (!empty($payment_methods)) { ?>
             <?php if ($display_type == 2 ) { ?>
                 <?php $current_method = false; ?>
-                <select data-onchange="reloadAll" name="payment_method">
+                <select data-onchange="reloadAll" name="payment_method" class="input-main-site">
                     <?php foreach ($payment_methods as $payment_method) { ?>
                         <option value="<?php echo $payment_method['code']; ?>" <?php echo !empty($payment_method['dummy']) ? 'disabled="disabled"' : '' ?> <?php echo !empty($payment_method['dummy']) ? 'data-dummy="true"' : '' ?> <?php if ($payment_method['code'] == $code) { ?>selected="selected"<?php } ?>><?php echo $payment_method['title']; ?></option>
                         <?php if ($payment_method['code'] == $code) { $current_method = $payment_method; } ?>

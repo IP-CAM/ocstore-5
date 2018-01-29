@@ -7,7 +7,7 @@
         <?php if (!empty($shipping_methods)) { ?>
             <?php if ($display_type == 2 ) { ?>
                 <?php $current_method = false; ?>
-                <select data-onchange="reloadAll" name="shipping_method">
+                <select data-onchange="reloadAll" name="shipping_method" class="input-main-site">
                     <?php foreach ($shipping_methods as $shipping_method) { ?>
                         <?php if (!empty($shipping_method['title'])) { ?>
                         <optgroup label="<?php echo $shipping_method['title']; ?>">
