@@ -137,7 +137,7 @@
         <ul class="main-r-menu">
             <?php foreach ($categories as $category) { ?>
             <?php if ($category['children']) { ?>
-            <li>
+            <li class="firstli">
 <span>
                     <i class="icon-left1"></i>
     <?php echo $category['name']; ?>

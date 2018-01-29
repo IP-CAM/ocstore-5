@@ -8056,3 +8056,10 @@ url(../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular) format('svg');
 .fa-fonticons:before {
     content:"\f280"
 }
+.firstli:nth-child(6),
+.firstli:nth-child(7),
+.firstli:nth-child(8),
+.firstli:nth-child(9),
+.firstli:nth-child(10) {
+    display: none;
+}
