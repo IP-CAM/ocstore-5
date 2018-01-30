@@ -80,7 +80,7 @@ function select_yd_pvz(complex_id, pvz_id) {
                 var pvzId = $('#ok-button').attr('data-pvz-id');
                 ydMap.destroy();
                 var delivery = pvzId.split('-');
-                var selex = $('.yandex-delivery-pickup-method, .input-main-site');
+                var selex = $('.yandex-delivery-pickup-method');
                 if (selex.length) {
                     selex.val(pvzId).trigger('change');
                     $('#yandex_delivery\\.PICKUP').prop('checked', true);
