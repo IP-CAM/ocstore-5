@@ -828,3 +828,13 @@
     width: 100%;
     box-sizing: border-box;
 }
+@media only screen and (max-width: 767px) {
+    .row-customer_lastname,
+    .row-customer_telephone,
+    .row-customer_email {
+        width: 100% !important;
+    }
+    #pay-methods .pay-method {
+        width: 100%;
+    }
+}
