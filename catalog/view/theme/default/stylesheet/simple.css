@@ -190,9 +190,6 @@
 .simplecheckout-block-content .dropdown-menu li a {
     margin-bottom: 4px !important;
 }
-.simplecheckout-block-content .dropdown-menu li a:last-child {
-    margin-bottom: 0 !important;
-}
 .simplecheckout-required {
     color: #FF0000;
     font-weight: bold;
