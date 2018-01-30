@@ -276,9 +276,6 @@
 }
 .simplecheckout-cart-total {
     padding: 7px 3px;
-    border-right: 1px solid #DDDDDD;
-    border-bottom: 1px solid #DDDDDD;
-    border-left: 1px solid #DDDDDD;
     text-align: right;
 }
 .simplecheckout-cart-total:after {
