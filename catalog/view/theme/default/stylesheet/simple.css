@@ -177,9 +177,14 @@
     width: 15%;
     text-align: right;
 }
-.simplecheckout-methods-description {
-    padding: 5px;
-    margin: 5px 0px;
+.simplecheckout-methods-description a{
+    display: block;
+    margin-bottom: 10px;
+    color: #ffba00;
+    font-family: 'Arial';
+    border-bottom: 1px dotted #ffba00;
+    display: inline-block;
+    text-decoration: none;
 }
 .simplecheckout-required {
     color: #FF0000;
