@@ -824,3 +824,7 @@
     padding-right: 0;
     width: 34%;
 }
+#pay-methods label {
+    width: 100%;
+    box-sizing: border-box;
+}
