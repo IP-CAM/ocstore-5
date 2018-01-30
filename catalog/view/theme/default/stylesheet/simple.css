@@ -278,6 +278,15 @@
     padding: 7px 3px;
     text-align: right;
 }
+.simplecheckout-cart-total span b {
+    font-family: 'Arial-Black';
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+.simplecheckout-cart-total-value {
+    color: #474747;
+    font-family: 'Arial';
+}
 .simplecheckout-cart-total:after {
     content:"";
     display:block;
