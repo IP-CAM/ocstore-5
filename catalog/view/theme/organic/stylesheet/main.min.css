@@ -2776,7 +2776,8 @@ footer {
 }
 .input-main-site,
 .input-main-site-area,
-.yandex-delivery-pickup-method{
+.yandex-delivery-pickup-method,
+.yandex-delivery-kd-method {
     width:100%;
     height:40px;
     background-color:#fff;
