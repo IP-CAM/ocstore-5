@@ -8294,3 +8294,6 @@ button.close {
 .affix {
     position: fixed;
 }
+.modal-body #map {
+    width: 100% !important;
+}
