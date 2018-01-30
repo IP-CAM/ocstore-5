@@ -812,3 +812,9 @@
 #agreement_checkbox .checkbox {
     margin: 0;
 }
+.row-customer_lastname,
+.row-customer_telephone,
+.row-customer_email {
+    float: left;
+    width: 33%;
+}
