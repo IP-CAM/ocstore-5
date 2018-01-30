@@ -835,6 +835,6 @@
         width: 100% !important;
     }
     #pay-methods .pay-method {
-        width: 100%;
+        width: 100% !important;
     }
 }
