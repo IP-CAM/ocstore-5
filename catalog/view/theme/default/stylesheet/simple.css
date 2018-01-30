@@ -816,5 +816,11 @@
 .row-customer_telephone,
 .row-customer_email {
     float: left;
-    width: 33%;
+    width: 32%;
+    padding-right: 10px;
+    margin: 20px 0;
+}
+.row-customer_email {
+    padding-right: 0;
+    width: 34%;
 }
