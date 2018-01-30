@@ -1,0 +1,364 @@
+<modification>
+    <id>Acute Yandex Shipping</id>
+    <version>3.2.7</version>
+    <vqmver>2.4.1</vqmver>
+    <author>tabook</author>
+    <file name="system/engine/action.php">
+        <operation>
+            <search position="before"><![CDATA[public function getFile() {]]></search>
+            <add><![CDATA[
+    public function execute($registry) {
+        // Stop any magical methods being called
+        if (substr($this->method, 0, 2) == '__') {
+            return false;
+        }
+
+        if (is_file($this->file)) {
+            include_once($this->file);
+
+            $class = $this->class;
+
+            $controller = new $class($registry);
+
+            if (is_callable(array($controller, $this->method))) {
+                return call_user_func(array($controller, $this->method), $this->args);
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+	]]></add>
+        </operation>
+    </file>
+    <file name="admin/controller/sale/order.php">
+        <operation>
+            <search position="after"><![CDATA[$results = $this->model_sale_order->getOrders($data);]]></search>
+            <add><![CDATA[
+	        $this->data['create_yd_url'] = ($this->config->get('config_secure') ? HTTPS_CATALOG : HTTP_CATALOG) . 'index.php?route=module/yandex_delivery/createYandexOrder&order_id=';
+	]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA['customer'      => $result['customer'],]]></search>
+            <add><![CDATA[		                'create_yd'     => ($this->config->get('yd_integration_status') && isset($result['yandex_order_id']) && $result['yandex_order_id'] === "0"),
+        	        	'edit_yd'       => ($this->config->get('yd_integration_status') && isset($result['yandex_order_id']) && $result['yandex_order_id']),
+				'yandex_order_id' => $this->config->get('yd_integration_status') ? $result['yandex_order_id'] : 0,]]></add>
+        </operation>
+    </file>
+    <file name="admin/model/sale/order.php">
+        <operation>
+            <search position="before" index="1"><![CDATA[if (isset($data['filter_order_status_id']) && !is_null($data['filter_order_status_id'])) {]]></search>
+            <add><![CDATA[	        if ($this->config->get('yd_integration_status')) { 
+			$sql = str_replace('o.date_modified', 'o.date_modified, yd.yandex_order_id, yd.data', $sql);
+	        	$sql .= " LEFT JOIN " . DB_PREFIX . "yandex_delivery yd ON yd.order_id = o.order_id"; 
+		}
+	]]></add>
+        </operation>
+    </file>
+    <file name="admin/view/template/sale/order_list.tpl">
+        <operation>
+            <search position="before"><![CDATA[<td align="right"><a onclick="filter();" class="button"><?php echo $button_filter; ?></a></td>]]></search>
+            <add><![CDATA[<td></td>]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<td class="right"><?php echo $column_action; ?></td>]]></search>
+            <add><![CDATA[<td class="right">Яндекс.Доставка</td>]]></add>
+        </operation>
+        <operation>
+            <search position="after"><![CDATA[<td class="left"><?php echo $order['date_modified']; ?></td>]]></search>
+            <add><![CDATA[                  <td class="right"><?php if ($order['create_yd']) { ?>
+                      <a href="#" id="btn-create-yd-<?php echo $order['order_id']; ?>" onclick="createYandexOrder(<?php echo $order['order_id']; ?>); return false;" title="Создать заказ в службе Яндекс.Доставка" class="btn btn-success">Создать</a>
+                      <?php } ?>
+                      <?php if ($order['edit_yd']) { ?>
+                      <a href="#" id="btn-edit-yd-<?php echo $order['order_id']; ?>" onclick="editYandexOrder(<?php echo $order['yandex_order_id']; ?>); return false;" title="Редактировать заказ в службе Яндекс.Доставка" class="btn btn-primary">Редактировать</a>
+                      <?php } ?>
+                  </td>]]></add>
+        </operation>
+        <operation>
+            <search position="before"><![CDATA[<?php echo $footer; ?>]]></search>
+            <add><![CDATA[<script type="text/javascript"><!--
+    function createYandexOrder(order_id ){
+        $.get('<?php echo $create_yd_url; ?>'+order_id)
+                .success(function (ret) {
+                    if (ret != false && ret.status == 'ok') {
+                        var create_btn = $('#btn-create-yd-'+order_id);
+                        create_btn.before($('<a href="#" id="btn-edit-yd-'+order_id+'" onclick="editYandexOrder('+ret.data.order.id+'); return false;" title="Редактировать заказ в службе Яндекс.Доставка" class="btn btn-primary">Редактировать</a>'));
+                        create_btn.hide();
+                    }
+                    else {
+                        str = (ret != false) ? 'Ошибка при создании заказа в Яндекс.Доставке: '+ret.data.errors[0]+'\r\nПодробности в логах сервера' : 'Неизвестная ошибка при создании заказа в Яндекс.Доставке.';
+                        alert(str);
+                    }
+                }).fail(function () {
+                    alert("Серверная ошибка вызова при создании заказа в Яндекс.Доставке")
+                });
+
+    }
+    function editYandexOrder(order_id ){
+	window.open('https://delivery.yandex.ru/order/create?id='+order_id, '_blank');
+    }
+//--></script>]]></add>
+        </operation>
+    </file>
+    <file name="catalog/controller/checkout/manual.php">
+        <operation error="log">
+            <search position="after"><![CDATA[$json['payment_method'] = array();]]></search>
+            <add><![CDATA[
+				$address_data['from_api'] = 1;
+            ]]></add>
+        </operation>
+    </file>
+    <file name="admin/controller/extension/total.php">
+        <operation error="log">
+            <search position="after"><![CDATA[
+            $extension = basename($file, '.php');
+            ]]></search>
+            <add><![CDATA[
+				if ($extension == 'yandex_delivery_total220') continue;
+            ]]></add>
+        </operation>
+    </file>
+    <file name="catalog/model/checkout/order.php">
+        <operation error="log">
+            <search position="after"><![CDATA[
+            function addOrder($data)
+            ]]></search>
+            <add><![CDATA[
+        $shipping_method = isset($this->session->data['shipping_method']['code']) ? $this->session->data['shipping_method']['code'] : '';
+        if (!(empty($shipping_method))) {
+	        $shipping_method = explode('.', $shipping_method);
+	        $key = $shipping_method[0] == 'yandex_delivery' ? preg_replace('/[a-zA-Z]+_/', '', $shipping_method[1]) : $shipping_method[1];
+	        $method = false;
+            $pvz = false;
+            if (!empty($key) && $shipping_method[0] == 'yandex_delivery' && ($key == 'PICKUP'||  !empty($this->session->data['yd'][$key]['pvz']))) {
+	            if ($key != 'PICKUP') {
+                    $pvz = $this->session->data['yd'][$key]['pvz'];
+        	        $method = $this->session->data['yd'][$key]['method'];
+                }
+                else {
+                    $complex_id = $this->session->data['yd']['pvz_selected'];
+                    $parts = explode('-', $complex_id);
+                    $tariff_id = $parts[0];
+                    $delivery_id = $parts[1];
+                    $key = $tariff_id.'_'.$delivery_id;
+                    if (!empty($this->session->data['yd'][$key]['pvz'])) {
+                        $pvz = $this->session->data['yd'][$key]['pvz'];
+                        $method = $this->session->data['yd'][$key]['method'];
+                    }
+                }
+
+		    if ($method && $pvz && $method["type"] == "PICKUP") {
+	               $data['shipping_address_1'] = $pvz["full_address"];
+        	       $data['shipping_address_2'] = $method["delivery"]["name"].' #'.$pvz["id"];
+		    }
+	        }
+	        if (isset($data['shipping_code']) && (0 === strpos($data['shipping_code'], 'yandex_delivery'))) {
+	            $data['shipping_method'] = strip_tags($data['shipping_method']);
+	        }
+	        if (isset($data['payment_code']) && (0 === strpos($data['payment_code'], 'yandex_delivery'))) {
+	            $data['payment_method'] = strip_tags($data['payment_method']);
+	        }
+	}
+            ]]></add>
+        </operation>
+        <operation error="log">
+            <search position="after"><![CDATA[$order_id = $this->db->getLastId();]]></search>
+            <add><![CDATA[	$action = new Action('module/yandex_delivery/addOrderEvent', $order_id);
+        $action->execute($this->registry);]]></add>
+        </operation>
+        <operation error="log">
+            <search position="after"><![CDATA[$this->cache->delete('product');]]></search>
+            <add><![CDATA[	$action = new Action('module/yandex_delivery/statusOrderEvent', $order_id);
+        $action->execute($this->registry);]]></add>
+        </operation>
+        <operation error="log">
+            <search position="after"><![CDATA[public function update($order_id, $order_status_id, $comment = '', $notify = false) {]]></search>
+            <add><![CDATA[	$action = new Action('module/yandex_delivery/editOrderEvent', $order_id);
+        $action->execute($this->registry);]]></add>
+        </operation>
+    </file>
+    <file name="catalog/view/theme/*/template/checkout/shipping_method.tpl">
+        <operation error="log">
+            <search position="after" index="2"><![CDATA[
+            </tr>
+            ]]></search>
+            <add><![CDATA[
+            <?php if (isset($quote['yd_html'])) { ?>
+                <tr>
+                    <td class="code">
+                    </td>
+                    <td class="title">
+                        <?php echo $quote['yd_html']; ?>
+                    </td>
+                    <td class="quote">
+                    </td>
+                </tr>
+            <?php } ?>
+            ]]></add>
+        </operation>
+    </file>
+	<file name="catalog/controller/checkout/checkout.php">
+        <operation error="log">
+            <search position="after"><![CDATA[
+            $this->document->setTitle($this->language->get('heading_title'));
+            ]]></search>
+            <add><![CDATA[
+		$this->document->addStyle('catalog/view/javascript/yandex_delivery/css/stylesheet.css');
+		$this->document->addScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+		$this->document->addScript('catalog/view/javascript/yandex_delivery/js/yd.js');
+		$this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');
+		$this->document->addStyle('catalog/view/javascript/jquery/magnific/magnific-popup.css');]]></add>
+        </operation>
+	</file>
+	<file name="catalog/controller/checkout/simplecheckout.php">
+        <operation error="skip">
+            <search position="after"><![CDATA[
+            $this->document->setTitle($this->language->get('heading_title'));
+            ]]></search>
+            <add><![CDATA[
+		$this->document->addStyle('catalog/view/javascript/yandex_delivery/css/stylesheet.css');
+		$this->document->addScript('https://api-maps.yandex.ru/2.1/?lang=ru_RU');
+		$this->document->addScript('catalog/view/javascript/yandex_delivery/js/yd.js');
+		$this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');
+		$this->document->addStyle('catalog/view/javascript/jquery/magnific/magnific-popup.css');]]></add>
+        </operation>
+	</file>
+<!--- Simple 4.5 + -->
+    <file path="catalog/controller/checkout/simplecheckout_shipping.php">
+        <operation error="skip">
+            <search position="before"><![CDATA[
+            $this->setOutputContent($this->renderPage('checkout/simplecheckout_shipping', $this->_templateData));
+            ]]></search>
+            <add><![CDATA[
+        if (!$this->simplecheckout->hasError('shipping') && isset($this->_templateData['shipping_method'])) {
+            $shipping = explode('.', $this->_templateData['shipping_method']['code']);
+            $key = $shipping[0] == 'yandex_delivery' ? preg_replace('/[a-zA-Z]+_/', '', $shipping[1]) : $shipping[1];
+            $yd_error = false;
+            if (isset($this->_templateData['shipping_method']) && ($this->_templateData['shipping_method']['code'] == 'yandex_delivery.stub' || $this->_templateData['shipping_method']['code'] == 'yandex_delivery.POST_stub')) {
+                $yd_error = 'Не указан адрес доставки';
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'PICKUP') {
+                $yd_error = (isset($this->session->data['yd']['pvz_selected']) && $this->session->data['yd']['pvz_selected']) ? '' : 'Не выбран пункт выдачи заказа';
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'TODOOR') {
+                $yd_error = ($this->session->data['yd']['kd_selected']) ? '' : 'Не выбрана курьерская служба для доставки';
+            }elseif ($shipping[0] == 'yandex_delivery' && (isset($this->session->data['yd'][$key]['method']))) {
+                $method = $this->session->data['yd'][$key]['method'];
+                if ($method["type"] == 'PICKUP' && empty($this->session->data['yd'][$key]['pvz'])) {
+                    $yd_error = 'Не выбран пункт выдачи заказа '.$method["delivery"]["name"].'!';
+                }
+            }
+            if ($yd_error) {
+                $this->_templateData['display_error']         = true;
+                $this->_templateData['has_error_shipping']    = true;
+                $this->_templateData['error_shipping']     = $yd_error;
+                $this->simplecheckout->addError('shipping');
+            }
+        }
+            ]]></add>
+        </operation>
+    </file>
+<!--- Simple 4.1 - 4.4 -->
+    <file name="catalog/controller/checkout/simplecheckout_shipping.php">
+        <operation error="skip">
+            <search position="before"><![CDATA[
+            $this->simplecheckout->resetCurrentBlock();
+            ]]></search>
+            <add><![CDATA[
+        if (!$this->simplecheckout->hasError() && isset($this->_templateData['shipping_method'])) {
+            $shipping = explode('.', $this->_templateData['shipping_method']['code']);
+            $key = $shipping[0] == 'yandex_delivery' ? preg_replace('/[a-zA-Z]+_/', '', $shipping[1]) : $shipping[1];
+            $yd_error = false;
+            if (isset($this->_templateData['shipping_method']) && ($this->_templateData['shipping_method']['code'] == 'yandex_delivery.stub' || $this->_templateData['shipping_method']['code'] == 'yandex_delivery.POST_stub')) {
+                $yd_error = 'Не указан адрес доставки';
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'PICKUP') {
+                $yd_error = (isset($this->session->data['yd']['pvz_selected']) && $this->session->data['yd']['pvz_selected']) ? '' : 'Не выбран пункт выдачи заказа';
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'TODOOR') {
+                $yd_error = ($this->session->data['yd']['kd_selected']) ? '' : 'Не выбрана курьерская служба для доставки';
+            }elseif ($shipping[0] == 'yandex_delivery' && (isset($this->session->data['yd'][$key]['method']))) {
+                $method = $this->session->data['yd'][$key]['method'];
+                if ($method["type"] == 'PICKUP' && empty($this->session->data['yd'][$key]['pvz'])) {
+                    $yd_error = 'Не выбран пункт выдачи заказа '.$method["delivery"]["name"].'!';
+                }
+            }
+            if ($yd_error) {
+                $this->_templateData['display_error']         = true;
+                $this->_templateData['has_error_shipping']    = true;
+                $this->_templateData['error_shipping']     = $yd_error;
+                $this->simplecheckout->addError();
+            }
+        }
+            ]]></add>
+        </operation>
+    </file>
+
+    <file name="catalog/controller/checkout/simplecheckout_shipping.php">
+        <operation error="skip">
+            <search position="after"><![CDATA[
+        if ($error) {
+            $this->simple->add_error('shipping');
+        }
+            ]]></search>
+            <add><![CDATA[
+        if (!$error && (!empty($this->data['shipping_method']))) {
+            $shipping = explode('.', $this->_templateData['shipping_method']['code']);
+            $key = $shipping[0] == 'yandex_delivery' ? preg_replace('/[a-zA-Z]+_/', '', $shipping[1]) : $shipping[1];
+            if (isset($this->data['shipping_method']) && ($this->data['shipping_method']['code'] == 'yandex_delivery.stub' || $this->data['shipping_method']['code'] == 'yandex_delivery.POST_stub')) {
+                $error = true;
+                $this->data['error_warning'] = 'Не указан адрес доставки';
+                $this->simple->add_error('shipping');
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'PICKUP') {
+                $yd_error = (isset($this->session->data['yd']['pvz_selected']) && $this->session->data['yd']['pvz_selected']) ? '' : 'Не выбран пункт выдачи заказа';
+            }
+            }elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'TODOOR') {
+                $yd_error = ($this->session->data['yd']['kd_selected']) ? '' : 'Не выбрана курьерская служба для доставки';
+            }
+            elseif ($shipping[0] == 'yandex_delivery' && (isset($this->session->data['yd'][$key]['method']))) {
+                $method = $this->session->data['yd'][$key]['method'];
+                if ($method["type"] == 'PICKUP' && empty($this->session->data['yd'][$key]['pvz'])) {
+                   $error = true;
+                   $this->data['error_warning'] = 'Не выбран пункт выдачи заказа '.$method["delivery"]["name"].'!';
+                   $this->simple->add_error('shipping');
+                }
+            }
+        }
+            ]]></add>
+        </operation>
+    </file>
+    <file name="catalog/model/payment/cod.php">
+        <operation>
+            <search position="after"><![CDATA[
+	public function getMethod($address, $total) {
+            ]]></search>
+            <add><![CDATA[
+            if (!empty($this->session->data['shipping_method'])) {
+                $sm = $this->session->data['shipping_method']['code'];
+                $shipping = explode('.', $sm);
+		if ($shipping[0] == 'yandex_delivery') return false;
+	    }
+            ]]></add>
+        </operation>
+    </file>
+
+	<file name="catalog/controller/checkout/shipping_method.php">
+		<operation>
+			<search position="after"><![CDATA[$this->session->data['comment'] = strip_tags($this->request->post['comment']);]]></search>
+			<add><![CDATA[
+			$key = $shipping[0] == 'yandex_delivery' ? preg_replace('/[a-zA-Z]+_/', '', $shipping[1]) : $shipping[1];
+            if (isset($shipping) && $shipping[0] == 'yandex_delivery' && (isset($this->session->data['yd'][$key]['method']))) {
+                $method = $this->session->data['yd'][$key]['method'];
+                if ($method["type"] == 'PICKUP' && empty($this->session->data['yd'][$key]['pvz'])) {
+                    $json['error']['warning'] = 'Не выбран пункт выдачи заказа '.$method["delivery"]["name"].'!';
+                }
+            }
+			elseif (isset($shipping) && ($shipping[0] == 'yandex_delivery.stub' || $shipping[0] == 'yandex_delivery.POST_stub')) 
+				$json['error']['warning'] = 'Не указан адрес доставки';
+		            elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'PICKUP') 
+                		if (!(isset($this->session->data['yd']['pvz_selected']) && $this->session->data['yd']['pvz_selected'])) $json['error']['warning'] = 'Не выбран пункт выдачи заказа';
+            		elseif ($shipping[0] == 'yandex_delivery' && $shipping[1] == 'TODOOR') 
+                		if (!($this->session->data['yd']['kd_selected'])) $json['error']['warning'] = 'Не выбрана курьерская служба для доставки';
+
+			]]></add>
+		</operation>
+	</file>
+
+</modification>
