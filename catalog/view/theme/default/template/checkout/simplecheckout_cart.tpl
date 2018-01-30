@@ -12,7 +12,7 @@
 
 <?php foreach ($totals as $total) { ?>
     <div class="simplecheckout-cart-total" id="total_<?php echo $total['code']; ?>">
-        <span><b><?php echo $total['title']; ?>:</b></span>
+        <span><b><?php echo $total['title']; ?></b></span>
         <span class="simplecheckout-cart-total-value"><?php echo $total['text']; ?></span>
         <span class="simplecheckout-cart-total-remove">
             <?php if ($total['code'] == 'coupon') { ?>
